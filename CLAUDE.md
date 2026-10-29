@@ -62,6 +62,7 @@ Follow **`DESIGN.md`**. It holds the user's rules and overrides any skill's defa
 - `markitdown`: read PDFs, Word and Excel files
 - `mck-ppt-design` / `pptx-author`: build the .pptx with python-pptx
 - `anti-slop-slides`: design discipline
+- `apple-design`: polish pass after designing from `design/references/` (see DESIGN.md for which parts apply)
 - `humanizer`: clean up slide text and speaker notes
 - `ib-check-deck`: final number and consistency QC
 - `brainstorming`: **use it before every planning step**: gate 0 questions, the gate 1 storyline, the gate 2 look, and any time the user's direction leaves a real choice open. Look at the materials first, lay out the options with trade-offs, and recommend one. Its output goes into the gate files in `review/`, not `docs/superpowers/`. The approval gates above replace its "writing-plans" hand-off, which isn't installed here.

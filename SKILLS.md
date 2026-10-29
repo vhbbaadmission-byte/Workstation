@@ -14,6 +14,7 @@ Cloud sessions (claude.ai/code) only see skills committed to `.claude/skills/`, 
 | `brainstorming` | Think through options before every plan (storyline, look) and recommend one | [obra/superpowers](https://github.com/obra/superpowers) (308k★) | MIT |
 | `dispatching-parallel-agents` | Split independent work across Sonnet helpers | obra/superpowers | MIT |
 | `verification-before-completion` | Check with evidence before claiming anything is done | obra/superpowers | MIT |
+| `apple-design` | Polish pass after designing from the references: typography, depth, restraint | [emilkowalski/skills](https://github.com/emilkowalski/skills) (51k★) | MIT |
 | `markitdown` | Turns the case PDFs, Word, Excel and PPT files into readable text | [microsoft/markitdown](https://github.com/microsoft/markitdown) (192k★) | MIT |
 
 ## Turn on in claude.ai (can't be copied here)
@@ -28,7 +29,7 @@ Anthropic's own **pptx**, **xlsx**, **docx** and **pdf** skills are licensed so 
 
 ## Tools the setup script installs
 
-`scripts/cloud-setup.sh` runs at the start of each cloud session. It installs python-pptx, markitdown, matplotlib, openpyxl, Pillow, and LibreOffice + poppler, which render slides to PNG so they can be reviewed as contact sheets. To make sessions start faster, paste the same script into your cloud environment's **Setup script** box; that result is cached.
+`scripts/cloud-setup.sh` runs at the start of each cloud session. It installs python-pptx, markitdown, matplotlib, openpyxl, Pillow, and LibreOffice + poppler + the Inter and IBM Plex fonts, which render slides to PNG so they can be reviewed as contact sheets. To make sessions start faster, paste the same script into your cloud environment's **Setup script** box; that result is cached.
 
 ## Agents (`.claude/agents/`)
 

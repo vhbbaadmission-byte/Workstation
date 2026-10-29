@@ -8,4 +8,8 @@ python3 -c "import pptx, markitdown, matplotlib, openpyxl, PIL" 2>/dev/null ||
 # LibreOffice + poppler turn .pptx into PNGs so slides can be looked at (contact sheets).
 command -v soffice >/dev/null && command -v pdftoppm >/dev/null ||
   { apt-get update -qq && apt-get install -y -qq libreoffice-impress poppler-utils fonts-liberation; }
+
+# Deck fonts (see DESIGN.md), so contact sheets match the final deck.
+fc-list | grep -q "Inter" || apt-get install -y -qq fonts-inter fonts-ibm-plex ||
+  echo "WARNING: Inter / IBM Plex fonts not installed; contact sheets will use fallback fonts"
 exit 0

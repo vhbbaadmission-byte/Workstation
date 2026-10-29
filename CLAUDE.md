@@ -15,7 +15,7 @@
 1. **Jaguar**: JLR's 2015 bond refinancing
 2. **UK Gilts**: bond pricing, YTM, the yield curve, and rate risk
 
-Both decks use the same design (one gate 2). The deliverable is `.pptx` only; PDF is not accepted. A hard copy is printed with **one slide per page** and spiral bound, so every slide must also read well on paper. The deadline has been extended; ask the user for the date at gate 0.
+Both decks use the same design (one gate 2). The deliverable is `.pptx` only; PDF is not accepted. A hard copy is printed with **one slide per page** and spiral bound, so every slide must also read well on paper. The deadline has been extended, but work as fast as quality allows; don't ask the user for the date.
 
 ## Materials
 Everything is in `Group 10 - HBS Case 1 Assignment_MATERIALS-*.zip`. Unzip it into `materials/` (gitignored). The `CFA Reference Materials/*.zip` files are zips too; unzip only the readings you need.
@@ -44,6 +44,7 @@ CFA Level 1 depth, for a BBA/MBA finance class. Concepts are explained where the
 - **Every exhibit**: rebuild it as a clean native table or chart from its numbers (the PDF has a "Do Not Copy" watermark, so don't screenshot it), label it "Exhibit N" with its source, then say what it shows, the key numbers and trends, what they mean, and what they imply for the decision.
 - **Every assigned question**: state it, break it into parts, apply theory, state assumptions, compare alternatives, and **show every calculation step on the slides**. No "see Excel".
 - **Final slide**: each member's photo, full name and student ID. The user will provide these; until then use a clearly marked placeholder.
+- The deck is presented live **and** read on paper, with no speaker notes. So each slide carries enough text to make its point without a presenter, but stays scannable: short lines, not paragraphs.
 - The deck stands on its own. Body text **at least 18pt**. Charts, tables and maths readable. No overcrowding. Consistent layout, fonts and colours.
 - No slide limit. Length follows the content; never pad to reach a count. Depth and flow matter more than count.
 
@@ -59,14 +60,15 @@ The user works like a director with an editor: **no long builds without sign-off
 2. **Pull every exhibit number into `work/<case>/exhibits.csv`.** Have two `sonnet-worker`s extract the numbers independently, diff their files, and fix any mismatch against the PDF. Check that totals add up (balance sheet balances, cash flow subtotals sum).
 3. Read the "Essential" CFA readings, and study how G1 and G2 open, pace exhibits, go deep on calculations and move between sections.
 4. **Test the session's tools:** can you search and fetch the web? Can you create a Claude Slides artifact? If either fails, tell the user now.
-5. Write `00-brief.md`: the case in plain words; every exhibit and question; the CFA concepts you'll use; your one-line answer to each question; the traps you found; the research plan; your questions for the user (including the deadline). **Stop.**
+5. Write `00-brief.md`: the case in plain words; every exhibit and question; the CFA concepts you'll use; your one-line answer to each question; the traps you found; the research plan; your questions for the user. **Stop.**
 
 ### Gate 1: Answers + storyline (per case)
 1. **Solve every question fully before planning any slides**, in `work/<case>/calcs.py` (runnable; prints every intermediate number) plus `work/<case>/answers.md` (method, assumptions, results).
 2. **Independent check:** a `sonnet-worker` solves the same questions from the case alone, without seeing your answers. Compare its numbers with yours and with the teaching note. Explain every difference in `answers.md`; never hide one. Tag each answer: *solid*, *debatable* or *uncertain*.
 3. Write `01-storyline.md`: one line per slide, giving its section, **the point it makes** (this becomes its title), and what it shows (which exhibit, calculation, chart or source). Never fix how many bullets, rows or boxes a slide has.
 4. Add an **instructions checklist**: every requirement in the instructions → the slide numbers that meet it.
-5. Where showing every step would flood the deck (e.g. pricing nine gilts), propose how to show it (e.g. one full worked example, then a results table with the formula stated) and **let the user choose**. **Stop.**
+5. **Grader review:** run the `grader` agent on `01-storyline.md`. Fix what you agree with; for the rest, say why not. Show its report and your response at the gate.
+6. Where showing every step would flood the deck (e.g. pricing nine gilts), propose how to show it (e.g. one full worked example, then a results table with the formula stated) and **let the user choose**. **Stop.**
 
 ### Gate 2: The look (once, shared by both decks)
 1. Design in **Claude Slides** (create a Slides artifact, the `/slides` template; if you can't start one yourself, ask the user to type `/slides` with your brief). Follow DESIGN.md: design from `design/references/`, then the `apple-design` polish pass.
@@ -90,9 +92,10 @@ Sections: Overview → Exhibits → each Question → Epilogue → Final slide.
 ### Gate 4: Final check (per case)
 1. `ib-check-deck` over the whole deck: the same number is the same everywhere, numbers match the story.
 2. Tick the instructions checklist against the finished deck.
-3. Print check: view every slide in greyscale; fix anything that becomes hard to read.
-4. `humanizer` pass on the slide text: wording only. **Diff every number before and after; they must not change.**
-5. Write `04-qc.md` with the results, and remind the user to embed fonts (DESIGN.md → Fonts) and flip through the deck in real PowerPoint. **Stop.**
+3. **Grader review:** run the `grader` agent on the finished deck. Fix what you agree with; list the rest with your reasons in `04-qc.md`.
+4. Print check: view every slide in greyscale; fix anything that becomes hard to read.
+5. `humanizer` pass on the slide text: wording only. **Diff every number before and after; they must not change.**
+6. Write `04-qc.md` with the results, and remind the user to embed fonts (DESIGN.md → Fonts) and flip through the deck in real PowerPoint. **Stop.**
 
 ## When to stop and ask, even between gates
 - Your answer and the teaching note differ by more than rounding.
@@ -149,6 +152,7 @@ Rules:
 - Give each helper a self-contained brief: the exact task, the input files, the slide numbers or storyline lines, where to save, and what "done" looks like. It can't see this conversation.
 - **Check everything a helper returns before it reaches the user.** Look at the rendered slides and spot-check numbers against the sources. You're responsible for the result.
 - If a helper's work is weak, redo it yourself or re-brief it more tightly. Don't hand it on.
+- The **`grader`** agent (Opus) is different: it reviews content quality at gates 1 and 4. Give it only the deliverable to judge, not your reasoning.
 
 ## Tools
 - `scripts/cloud-setup.sh` (runs at session start): python-pptx, markitdown, LibreOffice, poppler, fonts. If a tool is missing, rerun it.

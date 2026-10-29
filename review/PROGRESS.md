@@ -21,6 +21,9 @@ Gate 0 for both cases.
 - No speaker notes.
 - Cover details and the final slide (photos, names, student IDs): the user will provide these later.
 - G1 and G2 show the expected flow and depth; they're guides, not limits.
+- Don't ask for the deadline; work as fast as quality allows.
+- The deck is presented live, but with no speaker notes, so slides can't be too sparse.
+- The repo stays public.
 
 ## User feedback, word for word (newest first)
 —

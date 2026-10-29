@@ -34,3 +34,4 @@ Anthropic's own **pptx**, **xlsx**, **docx** and **pdf** skills are licensed so 
 ## Agents (`.claude/agents/`)
 
 - `sonnet-worker`: a Sonnet helper that Opus hands well-defined work to. See "Using Sonnet helpers" in CLAUDE.md.
+- `grader`: an Opus reviewer that grades the storyline (gate 1) and finished deck (gate 4) against the instructions, like the professor would.

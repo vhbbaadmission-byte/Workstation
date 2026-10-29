@@ -18,8 +18,9 @@ Per case folder (`Jaguar/`, `UK Gilts/`):
 | `Case Files/* Questions.docx` | **Teaching note with answers** | Use it to check your answers. Never copy its wording, and never present its numbers as ours without showing the working. |
 | `Case Presentation Instructions.docx` | The grading brief | Hard rules (below). Re-read it before every review gate. |
 | `CFA Reference Materials/CFA * Guide.txt` | Which CFA readings matter, in priority order | Read the "Essential" readings first. Theory and formulas should match CFA Level 1. |
-| `G1 NESA (Final).pptx` (268 slides) | A past group's full case deck | **Main reference for depth, structure and pacing.** Match this level or exceed it. |
-| `G2 WACC vs Equity.pptx`, `Investment-Analysis.pptx`, `Cash Flow Statement.pptx` | Lecture and other decks | References for level and how concepts are explained |
+| `G1 NESA (Final).pptx` (268 slides), `G2 WACC vs Equity.pptx` | Past case-study decks | **Show the flow and depth the professor expects.** Use them as guides, not limits: go beyond them wherever the case calls for it. |
+| `Investment-Analysis.pptx` | Lecture deck | Reference for level and how concepts are explained |
+| `Cash Flow Statement.pptx` | Lecture deck | Background knowledge, only when needed |
 | `UK Gilts/Spartan Inc (V3).docx`, `3.2 Spartan Solution.xlsx` | Another case and its solution | Reference for how worked solutions are laid out |
 
 ## Level
@@ -55,7 +56,7 @@ Do both cases in parallel or one after the other. Ask the user which at gate 0.
 `python3 scripts/contact_sheet.py deck.pptx review/<case>/sheet.png [--first N --last M]` renders slides into one numbered grid image. Before showing one to the user, look at it yourself and fix anything broken, cramped, misaligned or off-style.
 
 ## Design
-The user will supply design rules (`DESIGN.md`) later. Until then, follow the `anti-slop-slides` principles and take cues from `G1 NESA`, but keep the gate 2 look easy to change.
+The user will supply design rules (`DESIGN.md`) later. Until then, follow the `anti-slop-slides` principles and take cues from G1 and G2, but keep the gate 2 look easy to change.
 
 ## Skills in `.claude/skills/`
 - `markitdown`: read PDFs, Word and Excel files

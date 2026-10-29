@@ -11,6 +11,9 @@ Cloud sessions (claude.ai/code) only see skills committed to `.claude/skills/`, 
 | `ib-check-deck` | QC pass: same number on every slide, numbers match the story, wording, formatting | [anthropics/financial-services](https://github.com/anthropics/financial-services) | Apache-2.0 |
 | `anti-slop-slides` | Design rules so slides don't look AI-made; can copy a look from a reference image | Your own skill | — |
 | `humanizer` | Strips AI-sounding phrasing from slide text and notes | [blader/humanizer](https://github.com/blader/humanizer) (62k★) | MIT |
+| `brainstorming` | Think through options before every plan (storyline, look) and recommend one | [obra/superpowers](https://github.com/obra/superpowers) (308k★) | MIT |
+| `dispatching-parallel-agents` | Split independent work across Sonnet helpers | obra/superpowers | MIT |
+| `verification-before-completion` | Check with evidence before claiming anything is done | obra/superpowers | MIT |
 | `markitdown` | Turns the case PDFs, Word, Excel and PPT files into readable text | [microsoft/markitdown](https://github.com/microsoft/markitdown) (192k★) | MIT |
 
 ## Turn on in claude.ai (can't be copied here)
@@ -21,8 +24,12 @@ Anthropic's own **pptx**, **xlsx**, **docx** and **pdf** skills are licensed so 
 
 - `frontend-slides`, `impeccable`, `ui-ux-pro-max`: they produce HTML/web UI, but the deliverable must be .pptx.
 - LSEG bond skills (in anthropics/financial-services): they need a paid LSEG data connection.
-- Superpowers (brainstorming/plans): its approval steps will be written into this project's own workflow instead.
+- Superpowers `writing-plans` / `executing-plans`: built for code and tests; the approval gates in CLAUDE.md replace them.
 
 ## Tools the setup script installs
 
 `scripts/cloud-setup.sh` runs at the start of each cloud session. It installs python-pptx, markitdown, matplotlib, openpyxl, Pillow, and LibreOffice + poppler, which render slides to PNG so they can be reviewed as contact sheets. To make sessions start faster, paste the same script into your cloud environment's **Setup script** box; that result is cached.
+
+## Agents (`.claude/agents/`)
+
+- `sonnet-worker`: a Sonnet helper that Opus hands well-defined work to. See "Using Sonnet helpers" in CLAUDE.md.

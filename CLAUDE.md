@@ -64,6 +64,25 @@ Follow **`DESIGN.md`**. It holds the user's rules and overrides any skill's defa
 - `anti-slop-slides`: design discipline
 - `humanizer`: clean up slide text and speaker notes
 - `ib-check-deck`: final number and consistency QC
+- `brainstorming`: **use it before every planning step**: gate 0 questions, the gate 1 storyline, the gate 2 look, and any time the user's direction leaves a real choice open. Look at the materials first, lay out the options with trade-offs, and recommend one. Its output goes into the gate files in `review/`, not `docs/superpowers/`. The approval gates above replace its "writing-plans" hand-off, which isn't installed here.
+- `dispatching-parallel-agents`: how to split independent work across helpers (see below)
+- `verification-before-completion`: before saying anything is done or correct, check it (render it, recount it, recompute it) and show the evidence
+
+## Using Sonnet helpers
+You (Opus) are the lead. Hand work to the **`sonnet-worker`** agent (`.claude/agents/`) whenever you judge Sonnet can do it well. That means the task is clearly defined, has a checkable result, and needs no judgment calls. This saves time and usage, and independent pieces can run in parallel.
+
+| Usually give to Sonnet | Keep for yourself |
+|---|---|
+| Turning materials into text and pulling out exhibit numbers | Understanding the case; gate 0 brief |
+| Gathering external facts with sources for the overview and epilogue | The storyline (gate 1) |
+| Building slides from an **approved** storyline section + `DESIGN.md` | Design decisions and the gate 2 look |
+| Rendering contact sheets; first-pass checks (18pt, axis labels, legends) | Financial reasoning: bond pricing, yields, cash flows, final answers |
+| Recomputing a calculation independently to cross-check yours | Talking to the user, and anything shown at a gate |
+
+Rules:
+- Give each helper a self-contained brief: the exact task, the input files, the slide numbers or storyline lines, where to save, and what "done" looks like. It can't see this conversation.
+- **Check everything a helper returns before it reaches the user.** Look at the rendered slides and spot-check numbers against the sources. You're responsible for the result.
+- If a helper's work is weak, redo it yourself or re-brief it more tightly. Don't hand it on.
 
 The setup hook (`scripts/cloud-setup.sh`) installs python-pptx, markitdown, LibreOffice and poppler. If a tool is missing, rerun it.
 

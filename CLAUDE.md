@@ -5,7 +5,9 @@
 2. Read `CLAUDE.md` (this file), `DESIGN.md` and `review/PROGRESS.md`. Before any design work, **open and look at all three reference images** with the Read tool (it shows images):
    - `design/references/ref-1-bettertask-indigo.png`
    - `design/references/ref-2-pilot44-overview.png`
-   - `design/references/ref-3-pilot44-detail.png` PROGRESS.md says where we are and holds every approval and piece of feedback the user has given. It outranks your memory of earlier conversation.
+   - `design/references/ref-3-pilot44-detail.png`
+
+   PROGRESS.md says where we are and holds every approval and piece of feedback the user has given. It outranks your memory of earlier conversation.
 3. Continue from the "Next step" in PROGRESS.md.
 
 ## The job
@@ -43,7 +45,7 @@ CFA Level 1 depth, for a BBA/MBA finance class. Concepts are explained where the
 - **Every assigned question**: state it, break it into parts, apply theory, state assumptions, compare alternatives, and **show every calculation step on the slides**. No "see Excel".
 - **Final slide**: each member's photo, full name and student ID. The user will provide these; until then use a clearly marked placeholder.
 - The deck stands on its own. Body text **at least 18pt**. Charts, tables and maths readable. No overcrowding. Consistent layout, fonts and colours.
-- No slide limit; 150–200+ is fine. Depth and flow matter more than count.
+- No slide limit. Length follows the content; never pad to reach a count. Depth and flow matter more than count.
 
 ## How we work: approve first, then build
 The user works like a director with an editor: **no long builds without sign-off.** At each gate: save the deliverable in `review/<case>/` (or `review/shared/` for gate 2), update PROGRESS.md, commit and push, show it in chat, then **stop and wait**.

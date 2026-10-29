@@ -19,15 +19,21 @@ NEW_FACE = 500.0        # US$m, case p.1
 FX = 1.50               # US$ per GBP, March 2015, Exhibit 1 note
 MKT_PRICE = 111.276     # Exhibit 2, last traded 04/02/2015 (indicative)
 MKT_DATE = date(2015, 2, 4)
-SETTLE = date(2015, 3, 17)          # early settlement date (VERIFY: tender notice)
-FINAL_SETTLE = date(2015, 3, 31)    # final settlement date (VERIFY)
+SETTLE = date(2015, 3, 17)          # early settlement date (JLR release, sources_research A)
+FINAL_SETTLE = date(2015, 3, 31)    # final settlement date (JLR release)
 LAST_CPN = date(2014, 11, 15)
 MATURITY = date(2021, 5, 15)
 CALL_DATE = date(2016, 5, 15)       # Exhibit 1: first call May 2016
-CALL_PRICE = 104.0625               # VERIFY: assumed par + half the coupon (usual 10NC5 schedule)
-TENDER_TOTAL = 112.352              # US$1,123.52 per US$1,000 incl. early premium (VERIFY)
-TENDER_LATE = 109.352               # US$1,093.52 per US$1,000 (VERIFY)
-EARLY_PREMIUM = 3.0                 # US$30 per US$1,000 (VERIFY)
+CALL_PRICE = 104.0625               # par + half coupon; reproduces the tender price to the cent (OM prints 104.663%, a typo)
+TENDER_TOTAL = 112.352              # US$1,123.52 per US$1,000 incl. early premium (JLR pricing release 16 Mar 2015)
+TENDER_LATE = 109.352               # US$1,093.52 per US$1,000 (same release)
+EARLY_PREMIUM = 3.0                 # US$30 per US$1,000 (same release)
+REF_YIELD = 0.395                   # % 0.25% UST due 15 May 2016, 10:00 NY 16 Mar 2015 (same release)
+FIXED_SPREAD = 0.50                 # % (same release)
+TENDERED = 326.417                  # US$m, final results 31 Mar 2015 (79.61%)
+TENDERED_EARLY = 326.117            # US$m, early results 17 Mar 2015 (79.54%)
+TAX = 0.20                          # UK main corporation tax rate from 1 Apr 2015 (Finance Act 2013 s.6)
+MATURITY_ALT = date(2021, 11, 15)   # maturity per Tata Motors SEC 6-K (case says 15 May 2021): user to decide
 # US Treasury par yields, % (Exhibit 3 rebuilt from home.treasury.gov)
 UST_2011 = {"5Y": 1.83, "10Y": 3.15}
 UST_2015 = {"5Y": 1.57, "7Y": 1.90, "10Y": 2.10, "1Y": 0.26}
@@ -194,5 +200,76 @@ def main():
     print(f"  interest cover proxy FY15 9m: (PBT {2218} + finance exp {13} - finance inc {36}) = £{ebit_proxy}m (for ratio slides)")
 
 
+def extras():
+    line = "=" * 78
+    print(line, "\nEXTRA (grader, gate 1)")
+    # tender formula from the documents
+    y = (REF_YIELD + FIXED_SPREAD) / 100
+    p = clean_price(y, SETTLE, CALL_DATE, CALL_PRICE)
+    print(f"  tender formula: discount to 15 May 2016 call at {REF_YIELD:.3f}% + {FIXED_SPREAD:.2f}% = {100*y:.3f}% -> clean {p:.4f} -> US${10*p:.2f} per US$1,000 (published 1,123.52)")
+    print(f"  late price = total - early premium = {10*(p-EARLY_PREMIUM):.2f}")
+    paid_e = TENDERED_EARLY * TENDER_TOTAL / 100
+    paid_l = (TENDERED - TENDERED_EARLY) * TENDER_LATE / 100
+    ai_e, ai_l = TENDERED_EARLY * accrued(SETTLE)[1] / 100, (TENDERED - TENDERED_EARLY) * accrued(FINAL_SETTLE)[1] / 100
+    print(f"  actual cash: early {TENDERED_EARLY} x 112.352% = {paid_e:.2f} + late {TENDERED-TENDERED_EARLY:.3f} x 109.352% = {paid_l:.2f}; accrued {ai_e+ai_l:.2f}; total {paid_e+paid_l+ai_e+ai_l:.2f}")
+    print(f"  left outstanding {FACE-TENDERED:.3f}; called May 2016 at {CALL_PRICE}: {(FACE-TENDERED)*CALL_PRICE/100:.2f}")
+    # maturity conflict
+    for m in (MATURITY, MATURITY_ALT):
+        print(f"  maturity {m}: hold-to-maturity value @3.50% {clean_price(0.035, SETTLE, m, 100):.2f}; YTM at market 111.276: {100*solve_y(MKT_PRICE, MKT_DATE, m, 100):.2f}%")
+    # Exhibit 2: other old bond (GBP 8.25% 2020, first call Mar 2016)
+    # FX implied in Exhibit 1
+    print(f"  Exhibit 1 implied FX: 410/263 = {410/263:.3f}, 500/321 = {500/321:.3f}, 700/450 = {700/450:.3f}  (case uses 1.50 for March 2015)")
+    # new debt size
+    need = FACE * (TENDER_TOTAL + accrued(SETTLE)[1]) / 100
+    print(f"  cash needed to buy all US$410m: {need:.1f}; new issue {NEW_FACE:.0f}; surplus before fees {NEW_FACE-need:.1f}")
+    print(f"  interest: old {FACE*OLD_CPN/100:.2f} vs new on 410 {FACE*NEW_CPN/100:.2f} vs new on {need:.1f} {need*NEW_CPN/100:.2f} -> saving like-for-like funding {FACE*OLD_CPN/100-need*NEW_CPN/100:.2f} a year")
+    # after-tax NPV, per 100 face, two baselines, discount at after-tax cost of new debt
+    rt = NEW_CPN / 100 * (1 - TAX)
+    w = (180 - accrued(SETTLE)[0]) / 180
+    prem = TENDER_TOTAL - 100
+    def pv_old_after_tax(end, redemption):
+        dates = coupon_dates(date(2015, 5, 15), end)
+        pv = 0
+        for i, d in enumerate(dates):
+            cf = OLD_CPN / 2 * (1 - TAX) + (redemption if d == end else 0)
+            if d == end and redemption > 100:
+                cf -= (redemption - 100) * TAX      # call premium is deductible
+            pv += cf / (1 + rt / 2) ** (i + w)
+        return pv - accrued(SETTLE)[1] * (1 - TAX)  # accrued part of first coupon is paid either way
+    cost_now = TENDER_TOTAL - prem * TAX                # premium deductible now
+    for label, end, red in (("hold to May 2021", MATURITY, 100), ("call May 2016", CALL_DATE, CALL_PRICE)):
+        v = pv_old_after_tax(end, red)
+        print(f"  after-tax @ {100*rt:.2f}%: value of old debt avoided ({label}) {v:.2f} - after-tax cost {cost_now:.2f} = {v-cost_now:+.2f} per 100 -> US${4.1*(v-cost_now):+.1f}m")
+    # FCF and cash interest cover from Exhibits 4-5 (GBP m)
+    cfo = {"FY12": 2500, "FY13": 2429, "FY14": 3422, "FY15 9m": 2572}
+    ppe = {"FY12": 596, "FY13": 891, "FY14": 1201, "FY15 9m": 1147}
+    intang = {"FY12": 814, "FY13": 958, "FY14": 1155, "FY15 9m": 885}
+    fin = {"FY12": 128, "FY13": 179, "FY14": 269, "FY15 9m": 97}
+    div = {"FY12": 0, "FY13": 150, "FY14": 150, "FY15 9m": 150}
+    pbt = {"FY12": 1479, "FY13": 1674, "FY14": 2501, "FY15 9m": 2218}
+    da = {"FY12": 465, "FY13": 622, "FY14": 875, "FY15 9m": 743}
+    finexp = {"FY12": 85, "FY13": 18, "FY14": 185, "FY15 9m": 13}
+    fininc = {"FY12": 16, "FY13": 34, "FY14": 38, "FY15 9m": 36}
+    fx = {"FY12": 14, "FY13": -109, "FY14": 236, "FY15 9m": 58}
+    rev = {"FY12": 13512, "FY13": 15784, "FY14": 19386, "FY15 9m": 16040}
+    for k in cfo:
+        fcf = cfo[k] - ppe[k] - intang[k]
+        ebitda = pbt[k] + da[k] + finexp[k] - fininc[k] - fx[k]
+        print(f"  {k}: FCF {cfo[k]}-{ppe[k]}-{intang[k]} = {fcf}; after finance paid & dividends {fcf-fin[k]-div[k]};"
+              f" EBITDA {pbt[k]}+{da[k]}+{finexp[k]}-{fininc[k]}-({fx[k]}) = {ebitda} ({100*ebitda/rev[k]:.1f}%); EBITDA/cash finance {ebitda/fin[k]:.1f}x")
+
+    # balance-sheet and P&L ratios (Exhibits 4 and 6, GBP m)
+    bs = {"FY12": (2430, 0, 490, 1484, 2924), "FY13": (2072, 775, 328, 1839, 3539),
+          "FY14": (2260, 1199, 167, 1843, 5864), "FY15 9m": (2884, 1143, 193, 2230, 6797)}
+    for k, (c, d, st, lt, eq) in bs.items():
+        print(f"  {k}: net cash {c}+{d}-{st}-{lt} = {c+d-st-lt}; debt/equity ({st}+{lt})/{eq} = {(st+lt)/eq:.2f};"
+              f" tax rate {[19,460,622,482][list(bs).index(k)]}/{pbt[k]} = {100*[19,460,622,482][list(bs).index(k)]/pbt[k]:.1f}%;"
+              f" capitalised dev {[751,860,1030,850][list(bs).index(k)]} = {100*[751,860,1030,850][list(bs).index(k)]/pbt[k]:.0f}% of PBT")
+    print(f"  growth FY12->FY14: revenue {100*(rev['FY14']/rev['FY12']-1):.1f}%, PBT {100*(pbt['FY14']/pbt['FY12']-1):.1f}%")
+    print(f"  Exhibit 1 excess coupon vs 2015 coupons (GBP m/yr): 263 x (8.125-3.5)% = {263*0.04625:.1f}; 500 x (8.25-3.875)% = {500*0.04375:.1f}; total {263*0.04625+500*0.04375:.1f}")
+    print(f"  issuer call value implied: straight {clean_price(0.035, SETTLE, MATURITY, 100):.2f} - market {MKT_PRICE:.2f} = {clean_price(0.035, SETTLE, MATURITY, 100)-MKT_PRICE:.2f}; - tender {TENDER_TOTAL:.2f} = {clean_price(0.035, SETTLE, MATURITY, 100)-TENDER_TOTAL:.2f}")
+
+
 if __name__ == "__main__":
     main()
+    extras()

@@ -56,7 +56,7 @@ Do both cases in parallel or one after the other. Ask the user which at gate 0.
 `python3 scripts/contact_sheet.py deck.pptx review/<case>/sheet.png [--first N --last M]` renders slides into one numbered grid image. Before showing one to the user, look at it yourself and fix anything broken, cramped, misaligned or off-style.
 
 ## Design
-The user will supply design rules (`DESIGN.md`) later. Until then, follow the `anti-slop-slides` principles and take cues from G1 and G2, but keep the gate 2 look easy to change.
+Follow **`DESIGN.md`**. It holds the user's rules and overrides any skill's defaults. The user is still adding to it; where it's silent, follow the `anti-slop-slides` principles and take cues from G1 and G2. Add every piece of design feedback from the gates to `DESIGN.md` so it lasts.
 
 ## Skills in `.claude/skills/`
 - `markitdown`: read PDFs, Word and Excel files

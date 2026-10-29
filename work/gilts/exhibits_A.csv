@@ -1,0 +1,290 @@
+exhibit,table,row,column,value,unit,page,note
+1,UK Gilts,1 year,Price,102.50,£ per 100 face,3,blank in YTM col for this row
+1,UK Gilts,1 year,Coupon,3.25,%,3,printed 3¼%; annual/semi basis not stated in exhibit
+1,UK Gilts,1 year,Maturity,1,years,3,printed '1 year'
+1,UK Gilts,2 years,YTM,1.74,%,3,blank in Price col for this row
+1,UK Gilts,2 years,Coupon,5.25,%,3,printed 5¼%; annual/semi basis not stated in exhibit
+1,UK Gilts,2 years,Maturity,2,years,3,printed '2 years'
+1,UK Gilts,3 years,Price,107.02,£ per 100 face,3,blank in YTM col for this row
+1,UK Gilts,3 years,Coupon,4.5,%,3,printed 4½%; annual/semi basis not stated in exhibit
+1,UK Gilts,3 years,Maturity,3,years,3,printed '3 years'
+1,UK Gilts,5 years,YTM,3.00,%,3,blank in Price col for this row
+1,UK Gilts,5 years,Coupon,2.75,%,3,printed 2¾%; annual/semi basis not stated in exhibit
+1,UK Gilts,5 years,Maturity,5,years,3,printed '5 years'
+1,UK Gilts,7 years,Price,108.91,£ per 100 face,3,blank in YTM col for this row
+1,UK Gilts,7 years,Coupon,5,%,3,printed 5%; annual/semi basis not stated in exhibit
+1,UK Gilts,7 years,Maturity,7,years,3,printed '7 years'
+1,UK Gilts,10 years,YTM,4.04,%,3,blank in Price col for this row
+1,UK Gilts,10 years,Coupon,3.75,%,3,printed 3¾%; annual/semi basis not stated in exhibit
+1,UK Gilts,10 years,Maturity,10,years,3,printed '10 years'
+1,UK Gilts,20 years,Price,104.93,£ per 100 face,3,blank in YTM col for this row
+1,UK Gilts,20 years,Coupon,4.75,%,3,printed 4¾%; annual/semi basis not stated in exhibit
+1,UK Gilts,20 years,Maturity,20,years,3,printed '20 years'
+1,UK Gilts,30 years,YTM,4.36,%,3,blank in Price col for this row
+1,UK Gilts,30 years,Coupon,4.5,%,3,printed 4½%; annual/semi basis not stated in exhibit
+1,UK Gilts,30 years,Maturity,30,years,3,printed '30 years'
+1,UK Gilts,50 years,Price,94.96,£ per 100 face,3,blank in YTM col for this row
+1,UK Gilts,50 years,Coupon,4,%,3,printed 4%; annual/semi basis not stated in exhibit
+1,UK Gilts,50 years,Maturity,50,years,3,printed '50 years'
+1,UK Gilts,(title),Source,IMD research,text,3,source line under exhibit
+xlsx:note Exhibit 1,Exhibit 1,1 year,Years,1,years,A4,hard input
+xlsx:note Exhibit 1,Exhibit 1,1 year,Price,102.5,£ per 100 face,B4,hard input
+xlsx:note Exhibit 1,Exhibit 1,1 year,Coupon,3¼%,%(printed fraction),D4,hard input
+xlsx:note Exhibit 1,Exhibit 1,1 year,Maturity,1 year,text,E4,hard input
+xlsx:note Exhibit 1,Exhibit 1,2 years,Years,2,years,A5,hard input
+xlsx:note Exhibit 1,Exhibit 1,2 years,YTM,1.741122,%,C5,hard input; YTM in % with 6 dp (PDF shows 2 dp)
+xlsx:note Exhibit 1,Exhibit 1,2 years,Coupon,5¼%,%(printed fraction),D5,hard input
+xlsx:note Exhibit 1,Exhibit 1,2 years,Maturity,2 years,text,E5,hard input
+xlsx:note Exhibit 1,Exhibit 1,3 years,Years,3,years,A6,hard input
+xlsx:note Exhibit 1,Exhibit 1,3 years,Price,107.02,£ per 100 face,B6,hard input
+xlsx:note Exhibit 1,Exhibit 1,3 years,Coupon,4½%,%(printed fraction),D6,hard input
+xlsx:note Exhibit 1,Exhibit 1,3 years,Maturity,3 years,text,E6,hard input
+xlsx:note Exhibit 1,Exhibit 1,5 years,Years,5,years,A7,hard input
+xlsx:note Exhibit 1,Exhibit 1,5 years,YTM,3.003413,%,C7,hard input; YTM in % with 6 dp (PDF shows 2 dp)
+xlsx:note Exhibit 1,Exhibit 1,5 years,Coupon,2¾%,%(printed fraction),D7,hard input
+xlsx:note Exhibit 1,Exhibit 1,5 years,Maturity,5 years,text,E7,hard input
+xlsx:note Exhibit 1,Exhibit 1,7 years,Years,7,years,A8,hard input
+xlsx:note Exhibit 1,Exhibit 1,7 years,Price,108.91,£ per 100 face,B8,hard input
+xlsx:note Exhibit 1,Exhibit 1,7 years,Coupon,0.05,fraction,D8,"hard input; coupon stored as decimal fraction, 0.05=5%"
+xlsx:note Exhibit 1,Exhibit 1,7 years,Maturity,7 years,text,E8,hard input
+xlsx:note Exhibit 1,Exhibit 1,10 years,Years,10,years,A9,hard input
+xlsx:note Exhibit 1,Exhibit 1,10 years,YTM,4.039173,%,C9,hard input; YTM in % with 6 dp (PDF shows 2 dp)
+xlsx:note Exhibit 1,Exhibit 1,10 years,Coupon,3¾%,%(printed fraction),D9,hard input
+xlsx:note Exhibit 1,Exhibit 1,10 years,Maturity,10 years,text,E9,hard input
+xlsx:note Exhibit 1,Exhibit 1,20 years,Years,20,years,A10,hard input
+xlsx:note Exhibit 1,Exhibit 1,20 years,Price,104.93,£ per 100 face,B10,hard input
+xlsx:note Exhibit 1,Exhibit 1,20 years,Coupon,4¾%,%(printed fraction),D10,hard input
+xlsx:note Exhibit 1,Exhibit 1,20 years,Maturity,20 years,text,E10,hard input
+xlsx:note Exhibit 1,Exhibit 1,30 years,Years,30,years,A11,hard input
+xlsx:note Exhibit 1,Exhibit 1,30 years,YTM,4.358821,%,C11,hard input; YTM in % with 6 dp (PDF shows 2 dp)
+xlsx:note Exhibit 1,Exhibit 1,30 years,Coupon,4½%,%(printed fraction),D11,hard input
+xlsx:note Exhibit 1,Exhibit 1,30 years,Maturity,30 years,text,E11,hard input
+xlsx:note Exhibit 1,Exhibit 1,50 years,Years,50,years,A12,hard input
+xlsx:note Exhibit 1,Exhibit 1,50 years,Price,94.96,£ per 100 face,B12,hard input
+xlsx:note Exhibit 1,Exhibit 1,50 years,Coupon,0.04,fraction,D12,"hard input; coupon stored as decimal fraction, 0.05=5%"
+xlsx:note Exhibit 1,Exhibit 1,50 years,Maturity,50 years,text,E12,hard input
+xlsx:SOLVED_annual,SOLVED_annual,Years,1-yr col,1,,C3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,2-yr col,2,,D3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,3-yr col,3,,E3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,5-yr col,5,,F3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,7-yr col,7,,G3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,10-yr col,10,,H3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,20-yr col,20,,I3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,30-yr col,30,,J3,
+xlsx:SOLVED_annual,SOLVED_annual,Years,50-yr col,50,,K3,
+xlsx:SOLVED_annual,SOLVED_annual,Price,1-yr col,102.5,,C4,
+xlsx:SOLVED_annual,SOLVED_annual,Price,3-yr col,107.02,,E4,
+xlsx:SOLVED_annual,SOLVED_annual,Price,7-yr col,108.91,,G4,
+xlsx:SOLVED_annual,SOLVED_annual,Price,20-yr col,104.93,,I4,
+xlsx:SOLVED_annual,SOLVED_annual,Price,50-yr col,94.96,,K4,
+xlsx:SOLVED_annual,SOLVED_annual,YTM,2-yr col,1.741122,,D5,
+xlsx:SOLVED_annual,SOLVED_annual,YTM,5-yr col,3.003413,,F5,
+xlsx:SOLVED_annual,SOLVED_annual,YTM,10-yr col,4.039173,,H5,
+xlsx:SOLVED_annual,SOLVED_annual,YTM,30-yr col,4.358821,,J5,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,1-yr col,3¼%,,C6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,2-yr col,5¼%,,D6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,3-yr col,4½%,,E6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,5-yr col,2¾%,,F6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,7-yr col,0.05,,G6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,10-yr col,3¾%,,H6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,20-yr col,4¾%,,I6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,30-yr col,4½%,,J6,
+xlsx:SOLVED_annual,SOLVED_annual,Coupon,50-yr col,0.04,,K6,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,1-yr col,0.0325,,C8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,2-yr col,0.0525,,D8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,3-yr col,0.045,,E8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,5-yr col,0.0275,,F8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,7-yr col,0.05,,G8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,10-yr col,0.0375,,H8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,20-yr col,0.0475,,I8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,30-yr col,0.045,,J8,
+xlsx:SOLVED_annual,SOLVED_annual,coupon,50-yr col,0.04,,K8,
+xlsx:SOLVED_annual,SOLVED_annual,YTM,1-yr col,0.007317097514284291,,C9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,2-yr col,0.0174,,D9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,3-yr col,0.020627192067052096,,E9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,5-yr col,0.03,,F9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,7-yr col,0.035405789157270794,,G9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,10-yr col,0.0404,,H9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,20-yr col,0.043750866051877925,,I9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,30-yr col,0.0436,,J9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,YTM,50-yr col,0.04244,,K9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_annual,SOLVED_annual,Price,1-yr col,102.49999752291097,,C10,"formula =+NPV(C9,C12:C61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,2-yr col,106.84093818859104,,D10,"formula =+NPV(D9,D12:D61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,3-yr col,107.02025515002171,,E10,"formula =+NPV(E9,E12:E61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,5-yr col,98.85507320320134,,F10,"formula =+NPV(F9,F12:F61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,7-yr col,108.91019623448084,,G10,"formula =+NPV(G9,G12:G61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,10-yr col,97.65251699508259,,H10,"formula =+NPV(H9,H12:H61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,20-yr col,104.93006764355985,,I10,"formula =+NPV(I9,I12:I61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,30-yr col,102.31848613933072,,J10,"formula =+NPV(J9,J12:J61); cached value"
+xlsx:SOLVED_annual,SOLVED_annual,Price,50-yr col,94.97025703862323,,K10,"formula =+NPV(K9,K12:K61); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,1-yr col,1,,C3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,2-yr col,2,,D3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,3-yr col,3,,E3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,5-yr col,5,,F3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,7-yr col,7,,G3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,10-yr col,10,,H3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,20-yr col,20,,I3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,30-yr col,30,,J3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Years,50-yr col,50,,K3,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,1-yr col,102.5,,C4,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,3-yr col,107.02,,E4,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,7-yr col,108.91,,G4,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,20-yr col,104.93,,I4,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,50-yr col,94.96,,K4,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM,2-yr col,1.741122,,D5,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM,5-yr col,3.003413,,F5,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM,10-yr col,4.039173,,H5,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM,30-yr col,4.358821,,J5,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,1-yr col,3¼%,,C6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,2-yr col,5¼%,,D6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,3-yr col,4½%,,E6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,5-yr col,2¾%,,F6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,7-yr col,0.05,,G6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,10-yr col,3¾%,,H6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,20-yr col,4¾%,,I6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,30-yr col,4½%,,J6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Coupon,50-yr col,0.04,,K6,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,1-yr col,0.0325,,C8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,2-yr col,0.0525,,D8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,3-yr col,0.045,,E8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,5-yr col,0.0275,,F8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,7-yr col,0.05,,G8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,10-yr col,0.0375,,H8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,20-yr col,0.0475,,I8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,30-yr col,0.045,,J8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,annual coupon,50-yr col,0.04,,K8,
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,1-yr col,0.0073618811656871045,,C9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,2-yr col,0.0174,,D9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,3-yr col,0.020743277898518177,,E9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,5-yr col,0.03,,F9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,7-yr col,0.03551189333614728,,G9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,10-yr col,0.0404,,H9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,20-yr col,0.043775305817356974,,I9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,30-yr col,0.0436,,J9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM annual,50-yr col,0.042437439982502836,,K9,"hard-coded (solver result, not case-given)"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,1-yr col,0.0036809405828435522,,C10,formula =+C9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,2-yr col,0.0087,,D10,formula =+D9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,3-yr col,0.010371638949259089,,E10,formula =+E9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,5-yr col,0.015,,F10,formula =+F9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,7-yr col,0.01775594666807364,,G10,formula =+G9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,10-yr col,0.0202,,H10,formula =+H9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,20-yr col,0.021887652908678487,,I10,formula =+I9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,30-yr col,0.0218,,J10,formula =+J9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,YTM semiannual,50-yr col,0.021218719991251418,,K10,formula =+K9/2; cached value
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,1-yr col,102.49999990400582,,C11,"formula =+NPV(C10,C13:C162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,2-yr col,106.86993182623954,,D11,"formula =+NPV(D10,D13:D162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,3-yr col,107.01999463128034,,E11,"formula =+NPV(E10,E13:E162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,5-yr col,98.84722693101833,,F11,"formula =+NPV(F10,F13:F162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,7-yr col,108.90994054313128,,G11,"formula =+NPV(G10,G13:G162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,10-yr col,97.63361188343102,,H11,"formula =+NPV(H10,H13:H162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,20-yr col,104.92988216826174,,I11,"formula =+NPV(I10,I13:I162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,30-yr col,102.33059374366059,,J11,"formula =+NPV(J10,J13:J162); cached value"
+xlsx:SOLVED_semi-annual,SOLVED_semi-annual,Price,50-yr col,94.95996366301003,,K11,"formula =+NPV(K10,K13:K162); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Years,1-yr col,1,,C3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,2-yr col,2,,D3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,3-yr col,3,,E3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,5-yr col,5,,F3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,7-yr col,7,,G3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,10-yr col,10,,H3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,20-yr col,20,,I3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,30-yr col,30,,J3,
+xlsx:impact of interest rate change,impact of interest rate change,Years,50-yr col,50,,K3,
+xlsx:impact of interest rate change,impact of interest rate change,Price,1-yr col,102.5,,C4,
+xlsx:impact of interest rate change,impact of interest rate change,Price,3-yr col,107.02,,E4,
+xlsx:impact of interest rate change,impact of interest rate change,Price,7-yr col,108.91,,G4,
+xlsx:impact of interest rate change,impact of interest rate change,Price,20-yr col,104.93,,I4,
+xlsx:impact of interest rate change,impact of interest rate change,Price,50-yr col,94.96,,K4,
+xlsx:impact of interest rate change,impact of interest rate change,YTM,2-yr col,1.741122,,D5,
+xlsx:impact of interest rate change,impact of interest rate change,YTM,5-yr col,3.003413,,F5,
+xlsx:impact of interest rate change,impact of interest rate change,YTM,10-yr col,4.039173,,H5,
+xlsx:impact of interest rate change,impact of interest rate change,YTM,30-yr col,4.358821,,J5,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,1-yr col,3¼%,,C6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,2-yr col,5¼%,,D6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,3-yr col,4½%,,E6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,5-yr col,2¾%,,F6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,7-yr col,0.05,,G6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,10-yr col,3¾%,,H6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,20-yr col,4¾%,,I6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,30-yr col,4½%,,J6,
+xlsx:impact of interest rate change,impact of interest rate change,Coupon,50-yr col,0.04,,K6,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,1-yr col,0.0325,,C8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,2-yr col,0.0525,,D8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,3-yr col,0.045,,E8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,5-yr col,0.0275,,F8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,7-yr col,0.05,,G8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,10-yr col,0.0375,,H8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,20-yr col,0.0475,,I8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,30-yr col,0.045,,J8,
+xlsx:impact of interest rate change,impact of interest rate change,coupon,50-yr col,0.04,,K8,
+xlsx:impact of interest rate change,impact of interest rate change,YTM,1-yr col,0.017317097514284292,,C9,formula =+SOLVED_annual!C9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,2-yr col,0.0274,,D9,formula =+SOLVED_annual!D9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,3-yr col,0.030627192067052098,,E9,formula =+SOLVED_annual!E9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,5-yr col,0.04,,F9,formula =+SOLVED_annual!F9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,7-yr col,0.045405789157270796,,G9,formula =+SOLVED_annual!G9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,10-yr col,0.0504,,H9,formula =+SOLVED_annual!H9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,20-yr col,0.05375086605187793,,I9,formula =+SOLVED_annual!I9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,30-yr col,0.0536,,J9,formula =+SOLVED_annual!J9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,YTM,50-yr col,0.05244,,K9,formula =+SOLVED_annual!K9+1%; cached value
+xlsx:impact of interest rate change,impact of interest rate change,Price,1-yr col,101.49244542560169,,C10,"formula =+NPV(C9,C14:C63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,2-yr col,104.82096569188201,,D10,"formula =+NPV(D9,D14:D63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,3-yr col,104.0606113202454,,E10,"formula =+NPV(E9,E14:E63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,5-yr col,94.43522208622971,,F10,"formula =+NPV(F9,F14:F63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,7-yr col,102.70321538981942,,G10,"formula =+NPV(G9,G14:G63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,10-yr col,90.05828300662392,,H10,"formula =+NPV(H9,H14:H63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,20-yr col,92.4519439188696,,I10,"formula =+NPV(I9,I14:I63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,30-yr col,87.30534726982064,,J10,"formula =+NPV(J9,J14:J63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,Price,50-yr col,78.11965393705766,,K10,"formula =+NPV(K9,K14:K63); cached value"
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,1-yr col,-0.009829776796668521,,C11,formula =+C10/SOLVED_annual!C10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,2-yr col,-0.018906353041785007,,D11,formula =+D10/SOLVED_annual!D10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,3-yr col,-0.027654987606107517,,E11,formula =+E10/SOLVED_annual!E10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,5-yr col,-0.04471041266528031,,F11,formula =+F10/SOLVED_annual!F10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,7-yr col,-0.05699173318261175,,G11,formula =+G10/SOLVED_annual!G10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,10-yr col,-0.07776792879635741,,H11,formula =+H10/SOLVED_annual!H10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,20-yr col,-0.11891847594225868,,I11,formula =+I10/SOLVED_annual!I10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,30-yr col,-0.14672948590214818,,J11,formula =+J10/SOLVED_annual!J10-1; cached value
+xlsx:impact of interest rate change,impact of interest rate change,% Change in price,50-yr col,-0.17743032004970394,,K11,formula =+K10/SOLVED_annual!K10-1; cached value
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,1-yr col,1,,B1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,2-yr col,2,,C1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,3-yr col,3,,D1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,5-yr col,5,,E1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,7-yr col,7,,F1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,10-yr col,10,,G1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,20-yr col,20,,H1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,30-yr col,30,,I1,
+xlsx:table1-in-TN,table1-in-TN,Bond maturity,50-yr col,50,,J1,
+xlsx:table1-in-TN,table1-in-TN,Original price,1-yr col,102.49999752291097,,B2,
+xlsx:table1-in-TN,table1-in-TN,Original price,2-yr col,106.84093818859104,,C2,
+xlsx:table1-in-TN,table1-in-TN,Original price,3-yr col,107.02025515002171,,D2,
+xlsx:table1-in-TN,table1-in-TN,Original price,5-yr col,98.85507320320134,,E2,
+xlsx:table1-in-TN,table1-in-TN,Original price,7-yr col,108.91019623448084,,F2,
+xlsx:table1-in-TN,table1-in-TN,Original price,10-yr col,97.65251699508259,,G2,
+xlsx:table1-in-TN,table1-in-TN,Original price,20-yr col,104.93006764355985,,H2,
+xlsx:table1-in-TN,table1-in-TN,Original price,30-yr col,102.31848613933072,,I2,
+xlsx:table1-in-TN,table1-in-TN,Original price,50-yr col,94.97025703862323,,J2,
+xlsx:table1-in-TN,table1-in-TN,Original yield,1-yr col,0.007317097514284291,,B3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,2-yr col,0.0174,,C3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,3-yr col,0.020627192067052096,,D3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,5-yr col,0.03,,E3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,7-yr col,0.035405789157270794,,F3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,10-yr col,0.0404,,G3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,20-yr col,0.043750866051877925,,H3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,30-yr col,0.0436,,I3,
+xlsx:table1-in-TN,table1-in-TN,Original yield,50-yr col,0.04244,,J3,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,1-yr col,101.49244542560169,,B4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,2-yr col,104.82096569188201,,C4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,3-yr col,104.0606113202454,,D4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,5-yr col,94.43522208622971,,E4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,7-yr col,102.70321538981942,,F4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,10-yr col,90.05828300662392,,G4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,20-yr col,92.4519439188696,,H4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,30-yr col,87.30534726982064,,I4,
+xlsx:table1-in-TN,table1-in-TN,New price if YTM + 1%,50-yr col,78.11965393705766,,J4,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,1-yr col,-0.009829776796668521,,B5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,2-yr col,-0.018906353041785007,,C5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,3-yr col,-0.027654987606107517,,D5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,5-yr col,-0.04471041266528031,,E5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,7-yr col,-0.05699173318261175,,F5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,10-yr col,-0.07776792879635741,,G5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,20-yr col,-0.11891847594225868,,H5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,30-yr col,-0.14672948590214818,,I5,
+xlsx:table1-in-TN,table1-in-TN,% Change in price,50-yr col,-0.17743032004970394,,J5,

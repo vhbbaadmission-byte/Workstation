@@ -1,0 +1,28 @@
+exhibit,table,row,column,value,unit,page,note
+1,UK Gilts,1 year,Price,102.50,£ per 100 face,3,printed
+1,UK Gilts,1 year,Coupon,3.25,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,1 year,Maturity,1,years,3,printed as '1 year'
+1,UK Gilts,2 years,YTM,1.74,%,3,printed
+1,UK Gilts,2 years,Coupon,5.25,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,2 years,Maturity,2,years,3,printed as '2 years'
+1,UK Gilts,3 years,Price,107.02,£ per 100 face,3,printed
+1,UK Gilts,3 years,Coupon,4.5,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,3 years,Maturity,3,years,3,printed as '3 years'
+1,UK Gilts,5 years,YTM,3.00,%,3,printed
+1,UK Gilts,5 years,Coupon,2.75,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,5 years,Maturity,5,years,3,printed as '5 years'
+1,UK Gilts,7 years,Price,108.91,£ per 100 face,3,printed
+1,UK Gilts,7 years,Coupon,5,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,7 years,Maturity,7,years,3,printed as '7 years'
+1,UK Gilts,10 years,YTM,4.04,%,3,printed
+1,UK Gilts,10 years,Coupon,3.75,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,10 years,Maturity,10,years,3,printed as '10 years'
+1,UK Gilts,20 years,Price,104.93,£ per 100 face,3,printed
+1,UK Gilts,20 years,Coupon,4.75,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,20 years,Maturity,20,years,3,printed as '20 years'
+1,UK Gilts,30 years,YTM,4.36,%,3,printed
+1,UK Gilts,30 years,Coupon,4.5,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,30 years,Maturity,30,years,3,printed as '30 years'
+1,UK Gilts,50 years,Price,94.96,£ per 100 face,3,printed
+1,UK Gilts,50 years,Coupon,4,%,3,printed as fraction; decimal equivalent
+1,UK Gilts,50 years,Maturity,50,years,3,printed as '50 years'

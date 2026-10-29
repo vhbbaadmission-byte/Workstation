@@ -64,5 +64,8 @@ The hard copy is printed one slide per page, possibly in greyscale. So:
 ## Calculation slides
 These make up a large part of the deck. Lay each one out as **formula → numbers plugged in → result**, with the result in large type and the accent colour. One step per slide if needed; never shrink text to fit.
 
+## User design feedback, word for word
+- 2026-10-29: "as for the designs ensure you use the claude design style workflow to achieve that levle of quality and accuracy" → gate 2 is designed in the Claude Slides artifact following its own design workflow (direction → palette/type scale → layouts → slides), not hand-built in code.
+
 ## Still to come from the user
 Anything else: logo, extra examples, more do's and don'ts. Gate feedback gets added here.

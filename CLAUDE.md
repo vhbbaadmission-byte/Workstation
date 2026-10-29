@@ -43,7 +43,7 @@ The user works like a director with an editor: **no long builds without sign-off
 | **1. Storyline** | Every slide as one line: section, what the slide is for (its message), and the source or exhibit it uses | `01-storyline.md` |
 | **2. Look** | 5–6 sample slides (cover, section divider, exhibit + analysis, calculation, chart, conclusion) | `02-look.pptx` + contact sheet PNG |
 | **3. Build, one section at a time** | The finished section | Deck + contact sheet PNG of that section |
-| **4. Final QC** | Full deck plus a QC report (`ib-check-deck`, 18pt check, every exhibit and question covered) | Final `.pptx` + `04-qc.md` |
+| **4. Final QC** | Full deck plus a QC report (`ib-check-deck`, 18pt check, every chart's axis labels and legend visible, every exhibit and question covered) | Final `.pptx` + `04-qc.md` |
 
 Do both cases in parallel or one after the other. Ask the user which at gate 0.
 

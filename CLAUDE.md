@@ -2,7 +2,10 @@
 
 ## Start of every session
 1. `git pull --rebase`
-2. Read `CLAUDE.md` (this file), `DESIGN.md` and `review/PROGRESS.md`. PROGRESS.md says where we are and holds every approval and piece of feedback the user has given. It outranks your memory of earlier conversation.
+2. Read `CLAUDE.md` (this file), `DESIGN.md` and `review/PROGRESS.md`. Before any design work, **open and look at all three reference images** with the Read tool (it shows images):
+   - `design/references/ref-1-bettertask-indigo.png`
+   - `design/references/ref-2-pilot44-overview.png`
+   - `design/references/ref-3-pilot44-detail.png` PROGRESS.md says where we are and holds every approval and piece of feedback the user has given. It outranks your memory of earlier conversation.
 3. Continue from the "Next step" in PROGRESS.md.
 
 ## The job
@@ -140,6 +143,7 @@ You (Opus) are the lead. Hand work to the **`sonnet-worker`** agent (`.claude/ag
 | Re-solving the questions independently to cross-check yours | Talking to the user, and anything shown at a gate |
 
 Rules:
+- When a helper builds or checks slides, its brief must tell it to open `DESIGN.md` and the three images in `design/references/` first.
 - Give each helper a self-contained brief: the exact task, the input files, the slide numbers or storyline lines, where to save, and what "done" looks like. It can't see this conversation.
 - **Check everything a helper returns before it reaches the user.** Look at the rendered slides and spot-check numbers against the sources. You're responsible for the result.
 - If a helper's work is weak, redo it yourself or re-brief it more tightly. Don't hand it on.

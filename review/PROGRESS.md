@@ -26,6 +26,9 @@ User reviews gate 1 (answers + storylines for both cases) and answers two questi
 - The repo stays public.
 
 ## User feedback, word for word (newest first)
+- 2026-10-29 (gate 1, conditional approval): "It is approved from my end, given that the helpers agree that this is a good form. When you assign the helpers, make sure that you give them tough criteria and you explain to them what they need to do. The helpers are issued on that level, on a very sophisticated level, keeping all the restrictions and everything in mind. If they approve it, it is approved from my side. If they approve it, as soon as it's approved, move on to the next stage." → Gate 1 is approved once the independent reviewers (strict brief) pass both storylines; then go straight to gate 2. Standing rule: every helper brief carries tough, explicit pass/fail criteria and all project restrictions.
+- 2026-10-29: "did uRun like a secondary helper, an independent agent, to check your plan and approve it."
+- 2026-10-29: "what do i approve" / "do you have the city group and nesa slides?"
 - 2026-10-29 (gate 1 questions, chosen): Bond date = "Case date + one note (Recommended)" → use 15 May 2021, one slide notes the filing's 15 Nov 2021 (naive value 125.43 → 127.26; answer unchanged). Repeats = "One slide each (Recommended)" → every repeated calculation gets its own slide (formula → numbers → result).
 - 2026-10-29: "anything to approve?"
 - 2026-10-29: "approved" → gate 0 approved for both cases.

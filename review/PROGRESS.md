@@ -5,13 +5,13 @@ Read this at the start of every session. Update it at every gate and after every
 ## Status
 | | Jaguar | UK Gilts |
 |---|---|---|
-| Current gate | 0 — brief done, waiting for approval | 0 — brief done, waiting for approval |
-| Last approved | — | — |
+| Current gate | 1 — in progress | 1 — in progress |
+| Last approved | Gate 0 (2026-10-29) | Gate 0 (2026-10-29) |
 
 Shared gate 2 (look): not started · Build tool: not decided · Claude Slides link: https://claude.ai/artifact/FDSxNWFitiAfajUBNh6h5X (created empty at gate 0 as the tool test; used at gate 2)
 
 ## Next step
-User reviews `review/jaguar/00-brief.md` and `review/gilts/00-brief.md` and answers their questions. On "Approved": gate 1 for both cases.
+Gate 1 for both cases: solve every question (calcs.py, answers.md), independent check, storyline, grader review.
 
 ## Already settled with the user (before gate 0)
 - Two decks, one design system shared by both.
@@ -26,6 +26,8 @@ User reviews `review/jaguar/00-brief.md` and `review/gilts/00-brief.md` and answ
 - The repo stays public.
 
 ## User feedback, word for word (newest first)
+- 2026-10-29: "approved" → gate 0 approved for both cases.
+- 2026-10-29: "I'm happy with all of that for now. Let's move on to the next"
 - 2026-10-29: "I have connected with GitHub. Next time, when you ask me questions like "Your language was too complex for me," for now, even make a guess. I'm guessing what you said was right and accurate. Whenever you have questions for me next, keep the language as simple as possible, and make your explanations bigger and more simple so that I can understand what the implications are and what could have" → Rule: every question to the user uses very simple words, explains longer and more plainly what each choice means and what happens if they pick it, and avoids finance jargon (or explains it).
 - 2026-10-29 (gate 0 questions, answered by choice): Jaguar Q2 = "Call-aware first (Recommended)"; Currency = "US$, convert once (Recommended)"; Gilts basis = "Annual + 1 comparison (Recommended)"; Gilt names = "Name only if certain (Recommended)". Also: "Ask them a question with choices. Remember to see the repercussions: why this question arose, what my options are, and what the repercussions are for the options. As for GitHub, it is connected." → From now on, put questions to the user as multiple-choice, each saying why it arose and what each option leads to.
 - 2026-10-29 (gate 0, after network test): "you have full network access now , as for the designs ensure you use the claude design style workflow to achieve that levle of quality and accuracy"

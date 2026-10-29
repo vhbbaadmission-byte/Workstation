@@ -5,13 +5,13 @@ Read this at the start of every session. Update it at every gate and after every
 ## Status
 | | Jaguar | UK Gilts |
 |---|---|---|
-| Current gate | 1 — in progress | 1 — in progress |
+| Current gate | 1 — done, waiting for approval | 1 — done, waiting for approval |
 | Last approved | Gate 0 (2026-10-29) | Gate 0 (2026-10-29) |
 
 Shared gate 2 (look): not started · Build tool: not decided · Claude Slides link: https://claude.ai/artifact/FDSxNWFitiAfajUBNh6h5X (created empty at gate 0 as the tool test; used at gate 2)
 
 ## Next step
-Gate 1 for both cases: solve every question (calcs.py, answers.md), independent check, storyline, grader review.
+User reviews gate 1 (answers + storylines for both cases) and answers two questions: Jaguar maturity date; how to show repeated calculations. On "Approved": gate 2 (the look).
 
 ## Already settled with the user (before gate 0)
 - Two decks, one design system shared by both.
@@ -34,6 +34,11 @@ Gate 1 for both cases: solve every question (calcs.py, answers.md), independent 
 - 2026-10-29 (start of gate 0): "session branch is fine, both" — push to `claude/eloquent-cray-g3ajd9` instead of `main`; run gate 0 for both cases in this session.
 
 ## Decisions made without asking (show these at the next gate)
+- Gate 1: no Gilts bond matches a real gilt with certainty → case labels kept (user rule).
+- Gate 1: Exhibit 1 (Gilts) described as a teaching set; yields ~1 point above the real 9 May 2014 market (DMO data).
+- Gate 1: JLR call price taken as 104.0625 (reproduces the published tender price); the OM's "104.663%" treated as a misprint.
+- Gate 1: Jaguar Q3 adds an after-tax version at the UK 20% rate; Q1's level/tenor split shown as one 158bp block (the order changes the split).
+- Gate 1: grader suggestions accepted except Gilts "non-parallel shift" (one line only); reasons in each storyline.
 - Work on branch `claude/eloquent-cray-g3ajd9` (user: "session branch is fine").
 - `exhibits.csv` = extractor B's file for both cases. Extractor A agreed on every value; A's raw file is kept as `exhibits_A.csv`.
 - Jaguar Exhibit 3 (a chart with no numbers) is rebuilt from US Treasury's official daily par yield CSV, appended to `exhibits.csv` and logged in `work/jaguar/sources.md`. Its 5-year values match the two labels printed on the chart.

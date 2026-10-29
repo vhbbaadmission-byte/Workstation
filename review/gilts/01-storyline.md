@@ -13,22 +13,22 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 6. **Conventional gilts pay fixed cash; index-linked gilts pay cash that rises with inflation** · side-by-side; this case is conventional only (case p.2)
 7. **The UK has never missed a gilt payment, so gilts set the UK's risk-free rate** · DMO quote (case p.2); UK ratings 2014 vs today [src]
 8. **The Debt Management Office issues gilts for HM Treasury, mostly at 5, 10 and 30 years** · issuance; 50-year gilts since 2005, thinly traded (case p.2) [src]
-9. **The gilt market was £[x]bn in 2014 and is £[y]bn today** · bar chart [src]
-10. **The Bank of England, pension funds and insurers, and overseas investors own most gilts** · holdings breakdown [src]
+9. **The gilt market has doubled: £1,365bn in March 2014, £2,817bn in March 2026** · bar chart, conventional vs index-linked [src: DMO Annual Reviews]
+10. **In 2014 three groups owned over 80% of gilts: overseas investors (29%), pensions and insurers (27%) and the Bank of England (26%)** · holdings chart, March 2014 [src: DMO]
 11. **The UK borrowed heavily after 2008: debt rose from [x]% to [y]% of GDP** · public debt and deficit 2007–2014 vs today [src]
 12. **Gilts compete with US Treasuries and German Bunds for global savings** · 10-year yields of the three in May 2014 and today; sovereign spreads [src]
-13. **In May 2014 Bank Rate had been 0.5% for five years and QE held £375bn of gilts** · timeline 2008–2014 [src]
+13. **In May 2014 Bank Rate had been 0.5% for five years and QE held £375bn of gilts** · timeline 2008–2014 [src: BoE, DMO]
 14. **The case: Petr Cech must price nine gilts and measure their rate risk for his trading desk** · setting (MU Securities); why a desk needs fair prices (spot rich/cheap bonds) and risk numbers (limits, hedging) (case p.1)
 15. **Each question needs one CFA tool: TVM, yield to maturity, the yield curve, duration and convexity** · Q1–Q4 mapped to concepts
 
 ## 2 · Exhibit analysis
 16. Divider · 02 Exhibit analysis
 17. **Exhibit 1: nine gilts, each with a price or a yield but never both** · native table, rebuilt (coupon, maturity, price, YTM; blanks "?"), source IMD research
-18. **Coupons from 2¾% to 5¼% show the gilts were issued when rates were at different levels** · coupon vs maturity chart; high coupons = earlier, higher-rate years (with real issue years only where names are certain) [src]
+18. **Coupons from 2¾% to 5¼% show the gilts were issued when rates were at different levels** · coupon vs maturity chart; coupons set at issue reflect the rates of that time
 19. **Four of the five given prices are above 100, so those gilts yield less than their coupon** · given prices vs 100; 50-year at 94.96 is the only discount (first clue for Q1)
 20. **The four given yields rise with maturity, from 1.74% at 2 years to 4.36% at 30 years** · given YTMs plotted, gaps marked (sets up Q3)
-21. **Exhibit 1 is a teaching set: its yields sit above the real gilt market of May 2014** · Exhibit 1 vs the actual BoE/DMO gilt curve on 9 May 2014 (chart, source line); what that means: we analyse the exhibit's numbers and use real data only for context [src] *(wording depends on the data)*
-22. **The real gilts behind Exhibit 1** · case bond → real gilt name/maturity, only certain matches (user rule) [src] *(merged into 18 if few match)*
+21. **Exhibit 1 is a teaching set: its yields run about one point above the real gilt market on 9 May 2014** · chart: Exhibit 1 curve vs real DMO closing yields that day (2¾% 2024: 2.80% vs exhibit 10-year 4.04%; 4½% 2042: 3.39% vs 30-year 4.36%; 4% 2060: 3.36% vs 50-year 4.24%) [src: DMO 2014 reference prices]; the shape matches (real long end also dips), the level does not; we analyse the exhibit and use real data for context
+22. **None of the nine is an exact real gilt, so we keep the case's labels** · research result: no coupon-and-maturity pair matches a gilt in issue with certainty (user rule: name only if certain); nearest real gilts listed for context [src]
 23. **The exhibit asks us to solve four prices and five yields, then stress-test all nine** · roadmap; annual-coupon simplification flagged
 
 ## 3 · Q1: coupon rate vs YTM
@@ -68,8 +68,8 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 57. **The slope in numbers: +331bp from 1 to 10 years, +34bp to 20, −2bp to 30, −12bp to 50** · step-change bars
 58. **The short end implies rising rates: the 1-year rate one year ahead is 2.81%, against 0.73% today** · bootstrap: z1 0.73%, z2 1.77%, z3 2.09%; forwards 1y1y 2.81%, 2y1y 2.75% (CFA FI LM09)
 59. **Three theories explain a curve's shape** · expectations, liquidity preference, segmentation/preferred habitat side by side, what each predicts
-60. **Applied here: expected rate rises explain the steep short end, a term premium the slope to 10 years** · link to slide 58 and Bank Rate 0.5% [src]
-61. **The long end bends down because pension funds and insurers buy long gilts, even though the 50-year is illiquid** · preferred habitat; illiquidity should raise its yield, yet 4.24% is the lowest long yield → demand dominates [src]
+60. **Applied here: expected rate rises explain the steep short end, a term premium the slope to 10 years** · link to slide 58; Bank Rate 0.50% from 5 Mar 2009 to 4 Aug 2016 [src: BoE database]
+61. **The long end bends down because pension funds and insurers buy long gilts, even though the 50-year is illiquid** · preferred habitat; pensions and insurers held 26.6% of gilts in March 2014 [src: DMO]; the real market showed the same dip (4½% 2042 3.39% → 4% 2060 3.36%) [src]
 62. **Caution: this is a curve of coupon-bond yields, not spot rates** · YTM vs spot (coupon effect), our z-rates vs YTMs for 1–3 years
 63. **Q3 answer: an upward curve that flattens and bends down at the long end** · summary + chart thumbnail
 
@@ -102,10 +102,10 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 89. **Turning points: the 2016 Brexit vote and the UK's rating downgrade** · [src]
 90. **From 2022, inflation returned and Bank Rate rose from 0.1% to 5.25%** · Bank Rate chart [src]
 91. **September 2022: long gilts crashed and the Bank of England had to step in** · mini-budget, 30-year yield jump, BoE action (date, size) [src]
-92. **Our Q4 numbers in real life: a [x]bp rise × 50-year duration ≈ the actual loss** · apply our duration/convexity to the 2022 move and compare with the real fall in a long gilt [src]
+92. **Our Q4 numbers in real life: long gilt yields rose over 100bp in four days, our +1% scenario exactly** · BoE quote "gilts rose by over 100 basis points in four days" and "a 100 basis point increase in yields for a 20 year gilt maps to roughly a 20% price fall" [src: BoE]; vs our −11.89% (20-year), −17.74% (50-year); why theirs is bigger (low-coupon gilts have longer duration, slide 76)
 93. **The Bank then reversed QE and began selling gilts (QT)** · [src]
-94. **What happened to our nine gilts** · redeemed ones and dates; any still trading, then vs now [src]
-95. **Today (October 2026): Bank Rate [x]% and a gilt curve that [shape]** · today's curve vs Exhibit 1 curve and the real May 2014 curve (chart) [src]
+94. **A real 50-year gilt shows the damage: the 4% 2060 fell from 114.76 in May 2014 to about 75 today** · DMO 2014 close vs latest price [src; latest price to be re-verified at gate 4]
+95. **Today, Bank Rate is 3.75% and gilt yields are higher than in 2014 at every maturity** · Bank Rate held at 3.75% (Sep 2026; next decision 5 Nov 2026, recheck) [src: BoE]; today's curve vs Exhibit 1 vs real May 2014 (chart) [src]
 96. **Lessons for an investor: the coupon is not the return, the curve carries information, and duration is the price of extra yield** · closing slide
 
 ## 8 · Team

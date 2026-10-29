@@ -249,3 +249,7 @@ Cross-check, official DMO fitted curves at 31 March 2026 (not today; DMO Annual 
 - Fitch June 2014 (AA+) and Moody's Sept 2014 (Aa1 stable) rest on search snippets; S&P/Moody's 2026 ratings are not directly sourced.
 - DMO Annual Review 2013-14 says holdings 'at end-2014'; likely a typo for end-March 2014.
 - The case's coupon/tenor pairs do not correspond to real gilts for 7 of 9 bonds (see A1).
+
+## Lead checks (2026-10-29)
+- Spot-checked DMO 2014 reference prices XLS, 9 May 2014 rows: 2¾% Treasury Gilt 2024 clean 99.53, yield 2.802549; 4½% Treasury Gilt 2042 clean 120.15, yield 3.392884; 4% Treasury Gilt 2060 clean 114.76, yield 3.364984. Match the helper's table.
+- Bank Rate: "Bank rate maintained at 3.75% - September 2026 Monetary Policy Summary and Minutes" https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026 (accessed 2026-10-29). Next decision 5 Nov 2026: recheck before submission.

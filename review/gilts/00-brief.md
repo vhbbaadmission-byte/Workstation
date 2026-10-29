@@ -52,6 +52,10 @@ These match the teaching note to within rounding. Its 50-year price is 94.97 aga
 - Epilogue: what rates did next (the 2016 lows, 2022 inflation and rate rises, the **2022 mini-budget and pension (LDI) crisis**, when long gilts lost very heavily and duration became front-page news); today's Bank Rate and gilt curve; the prices of our nine bonds (or their successors) now.
 - Tools: web search and fetch both work. The Claude Slides artifact can be created.
 
-## Questions for you
+## Questions for you (answered 2026-10-29)
+- **Basis:** annual coupons as the main answer, plus one semi-annual comparison slide.
+- **Names:** name a gilt only when the match with the DMO list is certain; otherwise keep the generic label.
+
+### As asked
 1. **Annual vs semi-annual.** Our recommendation is to keep **annual** as the main answer (it matches Exhibit 1 and the teaching note) and add **one comparison slide** with the semi-annual version, showing how small the difference is. The alternative is to do everything semi-annually as real gilts pay, at the cost of departing from the exhibit. Which do you want?
 2. **Real gilt names.** If I can match Exhibit 1 to real gilts with confidence, may I name them on the slides (e.g. "4% Treasury Gilt 2060") and follow them in the epilogue? If a match is uncertain, I'll keep the generic "50-year 4%" label.

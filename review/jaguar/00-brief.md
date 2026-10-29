@@ -55,7 +55,11 @@ Extraction: two helpers extracted independently. **Every value agreed** (the onl
 - Overview: history (Ford → Tata 2008), brands, markets, competitors (BMW, Mercedes, Audi, Porsche), the 2015 high-yield market.
 - Tools: web search and fetch both work (fetch after you opened the network). The Claude Slides artifact can be created.
 
-## Questions for you
+## Questions for you (answered 2026-10-29)
+- **Q2:** call-aware value first; the teaching note's ~125 is shown as the naive upper limit and reconciled to the market and tender prices.
+- **Currency:** all bond maths in US$, converted to £ once at 1.50.
+
+### As asked
 1. **Q2: how should we treat the teaching note's 25–29%?** Our answer differs by much more than rounding.
    - **A (recommended):** lead with the call-aware value (≈109–112). Show the teaching note's to-maturity value (≈125) as the naive upper bound, explain why holders can't get it (the call), and reconcile to the market (111.28) and the actual tender (112.35). This also answers the "explain the gap" trap in CLAUDE.md.
    - **B:** follow the teaching note's method as the main answer and add the call as a caveat.

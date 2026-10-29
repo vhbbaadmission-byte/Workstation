@@ -26,6 +26,7 @@ User reviews `review/jaguar/00-brief.md` and `review/gilts/00-brief.md` and answ
 - The repo stays public.
 
 ## User feedback, word for word (newest first)
+- 2026-10-29 (gate 0 questions, answered by choice): Jaguar Q2 = "Call-aware first (Recommended)"; Currency = "US$, convert once (Recommended)"; Gilts basis = "Annual + 1 comparison (Recommended)"; Gilt names = "Name only if certain (Recommended)". Also: "Ask them a question with choices. Remember to see the repercussions: why this question arose, what my options are, and what the repercussions are for the options. As for GitHub, it is connected." → From now on, put questions to the user as multiple-choice, each saying why it arose and what each option leads to.
 - 2026-10-29 (gate 0, after network test): "you have full network access now , as for the designs ensure you use the claude design style workflow to achieve that levle of quality and accuracy"
 - 2026-10-29 (start of gate 0): "session branch is fine, both" — push to `claude/eloquent-cray-g3ajd9` instead of `main`; run gate 0 for both cases in this session.
 

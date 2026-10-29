@@ -172,3 +172,90 @@ Not found for F: sales volumes before FY2015 and in FY2016-FY2024, employee coun
 - Business Standard 2011 article (JLR to raise US$1.64bn junk bond sale): blocked (403); contents only from search summary.
 - JLR net debt in GBP at 31 Mar 2026, current employee count.
 - Hosts that would need allowing for WebFetch: www.business-standard.com, www.wardsauto.com, www.etftrends.com (curl via the proxy reached many others).
+
+
+---
+
+## Round 2 (2026-10-29)
+
+Access notes: sec.gov now answers curl with "Your Request Originates from an Undeclared Automated Tool" (403), and the WebFetch host list does not include sec.gov, fortune.com or content.naic.org. I did not try to get round the SEC block. So every SEC 6-K / 20-F item below is from a search snippet or is "not found". Pages read in full by curl: jaguarlandrover.com, jlr.com, legislation.gov.uk, gov.uk, pinsentmasons.com, business-standard.com, fortune.com, media.jaguarlandrover.com, storyboard18.com.
+
+### R2-1. Issue dates, prices and coupons of JLR's US$ notes
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| US$500m 5.625% notes due 2023 priced on or just before 28-29 Jan 2013; coupon 5.625%; size US$500m (initial talk was US$400m, see R2-1 note) | "Tata Motors announced today the pricing of $500 million Senior Notes due 2023 at a coupon of 5.625 per cent per annum." (Business Standard, dated Jan 29 2013, 3:11 PM IST) | https://www.business-standard.com/article/companies/tata-motors-owned-jlr-raises-500-mn-via-notes-113012900699_1.html | 2026-10-29 |
+| 2023 notes: indenture dated 28 Jan 2013 (so settlement/issue date is on or after 28 Jan 2013; consistent with the pricing day 28-29 Jan 2013) | "the outstanding $500,000,000 5.625% Senior Notes due 2023 (the “2023 Notes”) issued by the Company ... the indenture dated January 28, 2013 (the “2023 Indenture”)" | https://jaguarlandrover.com/news/2017/03/jaguar-land-rover-automotive-plc-announces-consents-solicitations (JLR release, 2 Mar 2017) | 2026-10-29 |
+| US$700m 4.125% notes due 2018: indenture dated 17 Dec 2013, coupon 4.125%, size US$700m | "$700,000,000 4.125% Senior Notes due 2018" ; "indenture dated December 17, " (text cut off at the page break in my extract; the date is "December 17, 2013" in the search snippet, see next row) | https://jaguarlandrover.com/news/2017/03/jaguar-land-rover-automotive-plc-announces-consents-solicitations | 2026-10-29 |
+| 2018 notes transacted in Dec 2013; GBP400m notes due 2022 in Jan 2014 | "In addition, in December 2013, $700 million notes due 2018 were transacted." ; "The last time Jaguar Land Rover raised funds in this way was in January 2014, when ?400 million notes, due 2022, were issued." (Business Standard, 28 Oct 2014; "?" is the pound sign lost in the page) | https://www.business-standard.com/amp/article/companies/jaguar-land-rover-to-raise-500mn-via-bonds-114102801226_1.html | 2026-10-29 |
+| US$500m 4.250% notes due 2019: launched about 28 Oct 2014 (offer announced; pricing date itself NOT found) | "Jaguar Land Rover Automotive plc, the parent company of the Jaguar Land Rover group of companies and a subsidiary of Tata Motors, has announced the offer of $500 million Senior Notes due 2019." (Business Standard, Last Updated Oct 28 2014, 7:32 PM IST) | https://www.business-standard.com/amp/article/companies/jaguar-land-rover-to-raise-500mn-via-bonds-114102801226_1.html | 2026-10-29 |
+| 4.250% 2019 notes: coupon and size confirmed; governed by a "2014 Indenture" | "(v) $500,000,000 4.250% Senior Notes due 2019 and the related indenture (the “2014 Indenture”" | https://jaguarlandrover.com/news/2017/03/jaguar-land-rover-automotive-plc-announces-consents-solicitations | 2026-10-29 |
+| US$500m 3.500% notes due 2020: priced 3 Mar 2015; coupon 3.500%; used to fund the tender for the 8.125% 2021 notes | "3 March 2015 JAGUAR LAND ROVER AUTOMOTIVE PLC PRICING OF $500 MILLION SENIOR NOTES OFFERING ... the pricing of $500 million Senior Notes due 2020 at a coupon of 3.500% per annum" | https://jaguarlandrover.com/news/2015/03/jaguar-land-rover-automotive-plc-pricing-500-million-senior-notes-offering | 2026-10-29 |
+| 2020 notes launched the same day, 3 Mar 2015 | "3 March 2015 JAGUAR LAND ROVER AUTOMOTIVE PLC LAUNCH OF $500 MILLION SENIOR NOTES OFFERING" | https://www.jlr.com/news/2015/03/jaguar-land-rover-automotive-plc-launch-500-million-senior-notes-offering | 2026-10-29 |
+| 2020 notes governed by "March 2015 Indenture" | "(iii) $500,000,000 3.500% Senior Notes due 2020 and the related indenture (the “March 2015 Indenture”)" | https://jaguarlandrover.com/news/2017/03/jaguar-land-rover-automotive-plc-announces-consents-solicitations | 2026-10-29 |
+| (NOT verified, search snippet only) the maturity of the 2020 notes is 15 Mar 2020 per a German bond listing | no page text obtained | https://finanzen.net/anleihen/jaguar-land-rover-automotive-anleihen | 2026-10-29 |
+| (NOT verified, search snippet only) the 4.250% 2019 notes were redeemed in full on 15 Nov 2019 | no page text obtained | https://www.sec.gov/Archives/edgar/data/926042/000119312519299042/d834958dex991.htm | 2026-10-29 |
+| 2011 notes: issue date 19 May 2011 (US$410m 8.125% due 2021) | "outstanding $410,000,000 8.125% Senior Notes due 2021 issued 19 May 2011" | https://jaguarlandrover.com/news/2015/03/jaguar-land-rover-automotive-plc-pricing-500-million-senior-notes-offering | 2026-10-29 |
+| 2011 plan before pricing: sterling and dollar notes, call after 3 years (2018 notes) and 5 years (2021 notes) | "The notes due 2018 will be callable after three years and the 2021 notes callable after five, the banker said." (Bloomberg via Business Standard; the page stamp says Jan 20 2013, but the text is the May 2011 deal: it names the 2021 US$ notes and the URL id is 111051000052, i.e. 10 May 2011) | https://www.business-standard.com/amp/article/companies/jlr-to-raise-1-64-bn-from-junk-bond-sale-111051000052_1.html | 2026-10-29 |
+
+Not found in R2-1: issue prices (par or discount) of the 2013, 2013-Dec, 2014 and 2015 US$ notes, and the 2011 US$410m issue price. The 2011 and 2013 pricing releases were not on any host I could read (jaguarlandrover.com returns 404 for guessed 2011-2014 URLs). The earlier-round sterling OM states "Issue Price: 100% plus accrued interest" for the GBP notes only. Do not assume par for the US$ notes on a slide without a source.
+Note on dates: the 28 Jan 2013 indenture date and the 29 Jan 2013 article date mean the 2013 notes were priced about 28 Jan 2013, not "January 23" (23 Jan was only the launch/roadshow date in a search summary; NOT verified).
+
+### R2-2. US high-yield credit spreads around May 2011 and March 2015
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| Around 10 May 2011 (Bloomberg story on the JLR deal): BofA Merrill Lynch HY index spread 502 bp, down 112 bp year to date. Best published level near the 16 May 2011 pricing. The page's "Jan 20 2013" stamp is a site error, because the story is about the May 2011 package (2021 notes, GBP500m 2018 notes) | "helping drive yields relative to benchmark government debt down 112 basis points this year to 502, according to Bank of America Merrill Lynch index data." | https://www.business-standard.com/amp/article/companies/jlr-to-raise-1-64-bn-from-junk-bond-sale-111051000052_1.html | 2026-10-29 |
+| Mid-March 2015: overall junk-bond spread about 4.6 percentage points (460 bp), against 3.3 points (330 bp) in summer 2014. Author Janet Revell, Fortune, 9 Mar 2015. Index not named | "Currently the difference between the yield on the overall junk-bond market and Treasury bonds with comparable maturities stands at about 4.6 percentage points—a sharp rise from the 3.3 percentage-point differential in the summer of 2014, before oil prices began to fall." | https://fortune.com/2015/03/09/give-junk-a-chance | 2026-10-29 |
+| Energy was about 15% of HY issuance in Mar 2015 (context for the widening) | "About 15% of the issuance in the high-yield bond sector comes from energy firms." (wording as in the Fortune extract: "...high-yield bond sector comes from energy firms") | https://fortune.com/2015/03/09/give-junk-a-chance | 2026-10-29 |
+| (NOT verified, search snippet only) Barclays Capital HY spread 476 bp and IG 131 bp on 24 May 2011; S&P HY spread 543 bp at end-2010 | snippet: "As of May 24, 2011, spreads on high-yield and investment grade bonds were 476 bps and 131 bps, respectively, according to Barclays Capital." ; page returned 403 to curl, host not allowed in WebFetch | https://content.naic.org/sites/default/files/naic_archive/corporate.pdf (NAIC archive) | 2026-10-29 |
+
+Not found: BB-only index spread at either date; any HY spread dated exactly 16 May 2011 or 16 Mar 2015. FRED (fred.stlouisfed.org/data/BAMLH0A0HYM2) fails with an HTTP/2 error through the proxy. Use the BofA 502 bp (about 10 May 2011) and the Fortune 4.6 pts (9 Mar 2015) as "about", with different index providers noted. Both are all-rating HY, not BB.
+
+### R2-3. Call features of the US$500m 3.500% notes due 2020
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| Not found. Neither the 3 Mar 2015 launch release nor the pricing release states redemption terms | The releases contain no redemption or make-whole text (pricing release read in full) | https://jaguarlandrover.com/news/2015/03/jaguar-land-rover-automotive-plc-pricing-500-million-senior-notes-offering ; https://www.jlr.com/news/2015/03/jaguar-land-rover-automotive-plc-launch-500-million-senior-notes-offering | 2026-10-29 |
+| Context only: the 2012 sterling notes had 104.125% from year 4 (quoted in section D above); the 2011 US$ notes callable from year 5 (R2-1) | see section D and R2-1 | - | 2026-10-29 |
+
+The offering memorandum / indenture of March 2015 would hold the call schedule. It is on EDGAR only if filed as a 6-K exhibit; sec.gov is blocked for me now, so this needs the lead agent or the user to open sec.gov (search Tata Motors CIK 926042, 6-K, March-April 2015). Until then, do not state any call terms for the 2020 notes on a slide.
+
+### R2-4. JLR results FY2009 to FY2011
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| FY2011 (year to 31 Mar 2011), IFRS: wholesales 243,621 (+26%), revenue GBP9,871m (+51%), profit before tax GBP1,115m (FY2010: GBP51m) | "Global wholesale volumes 243,621 units, up 26% Revenue £9,871 million, up 51% Profits before tax £1,115 million up, from £51million" ; "Profits before tax for the year were £1,115 million compared to £51 million for the prior year." | https://media.jaguarlandrover.com/news/2011/07/jaguar-land-rover-plc-annual-report-and-results (JLR release 28 Jul 2011) | 2026-10-29 |
+
+Derived, not a quote: the same release implies FY2010 revenue about GBP6.5bn (9,871/1.51) and wholesale about 193,000 (243,621/1.26); do not use without checking. Not found: FY2009 results, FY2010 absolute revenue and volume figures, retail volumes.
+
+### R2-5. Ownership today (2025 demerger)
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| Demerger effective 14 Oct 2025; JLR sits in the listed entity renamed Tata Motors Passenger Vehicles Ltd (TMPV); CV business separate | "The restructuring — effective October 14, 2025 — formally splits Tata Motors into two separate entities" ; "TMPV will oversee the company’s passenger vehicle, electric vehicle (EV), and Jaguar Land Rover (JLR) operations, while the commercial vehicle (CV) arm will continue under the name Tata Motors Ltd (TMLCV)." (Storyboard18, 24 Oct 2025) | https://storyboard18.com/how-it-works/tata-motors-completes-demerger-passenger-arm-now-tata-motors-passenger-vehicles-ltd-83114.htm | 2026-10-29 |
+| Shareholders received 1 CV share per Tata Motors share | "existing shareholders of Tata Motors as of October 14 will receive one share of TMLCV for every share of Tata Motors held." | same | 2026-10-29 |
+| JLR Automotive plc remains an indirect wholly-owned subsidiary of Tata Motors (statement as of 2015 and still the structure under TMPV; the post-2025 statement was not seen on a JLR page) | "Jaguar Land Rover Automotive plc is an indirect, wholly‑owned subsidiary of Tata Motors Limited (India)." (3 Mar 2015) | https://jaguarlandrover.com/news/2015/03/jaguar-land-rover-automotive-plc-pricing-500-million-senior-notes-offering | 2026-10-29 |
+
+Caution: search results disagreed on whether the CV company's name is "TML Commercial Vehicles" or "Tata Motors Ltd (TMLCV)" and on the CV listing date (Nov 2025 expected). Check the NSE/BSE notice before putting these on a slide. The Storyboard18 article is secondary; a Tata Motors stock-exchange filing would be better.
+
+### R2-6. Industry facts (premium SUV growth, China JV, sales by region, rivals' 2014 volumes)
+
+Not researched in this round (time-boxed to topics 1, 2, 3, 7, plus quick looks at 4 and 5).
+
+### R2-7. UK main corporation tax rate
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| 21% main rate for FY2014 (1 Apr 2014 to 31 Mar 2015); Finance Act 2013 s.4 | "4 Charge and main rate for financial year 2014 (1) Corporation tax is charged for the financial year 2014. (2) For that year the rate of corporation tax is— (a) 21% on profits of companies other than ring fence profits, and (b) 30% on ring fence profits of companies." | https://www.legislation.gov.uk/ukpga/2013/29/section/4/data.html | 2026-10-29 |
+| 20% from 1 Apr 2015 (announced at Budget 2013) | "The main rate of corporation tax will go down to 21% from 1 April 2014 and 20% from 1 April 2015, the Chancellor announced in his Budget." (Pinsent Masons Out-Law, 20 Mar 2013) | https://www.pinsentmasons.com/out-law/news/corporation-tax-down-to-20-from-2015-and-tax-and-procurement-rules-modified-in-the-budget | 2026-10-29 |
+| Small profits rate for FY2014 was 20% (so the rates merged at 20% in FY2015) | "For the financial year 2014 the small profits rate is— (a) 20% on profits of companies other than ring fence profits" (Finance Act 2014 s.6) | https://www.legislation.gov.uk/ukpga/2014/26/section/6/data.html | 2026-10-29 |
+| FY2015 charge section exists but states no rate in its text | "Corporation tax is charged for the financial year 2015." (Finance Act 2014 s.5; the 20% itself came from earlier legislation, not seen by me) | https://www.legislation.gov.uk/ukpga/2014/26/section/5/data.html | 2026-10-29 |
+| The gov.uk rates page now shows only 2022-2026 columns (19%, 25%), so it cannot be cited for 2014/2015 | "Rates for Corporation Tax years starting 1 April There are different rates for ring fence companies . Rate 2026 2025 2024 2023 2022" | https://www.gov.uk/government/publications/rates-and-allowances-corporation-tax/rates-and-allowances-corporation-tax | 2026-10-29 |
+
+### R2-8. Ratings
+
+| fact | exact quote | URL | accessed |
+|---|---|---|---|
+| Parent Tata Motors (not JLR itself) rated Ba3 by Moody's and BB- by S&P around the May 2011 deal, per Bloomberg | "The Mumbai-based company is rated Ba3 at Moody’s Investors Service and an equivalent BB- at Standard & Poor’s." | https://www.business-standard.com/amp/article/companies/jlr-to-raise-1-64-bn-from-junk-bond-sale-111051000052_1.html | 2026-10-29 |
+| JLR's own 2011 issue ratings, and S&P's rating in March 2015: not found (earlier round has S&P "highly strategic" only) | - | - | 2026-10-29 |

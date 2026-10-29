@@ -26,6 +26,8 @@ User reviews gate 1 (answers + storylines for both cases) and answers two questi
 - The repo stays public.
 
 ## User feedback, word for word (newest first)
+- 2026-10-29 (gate 1 questions, chosen): Bond date = "Case date + one note (Recommended)" → use 15 May 2021, one slide notes the filing's 15 Nov 2021 (naive value 125.43 → 127.26; answer unchanged). Repeats = "One slide each (Recommended)" → every repeated calculation gets its own slide (formula → numbers → result).
+- 2026-10-29: "anything to approve?"
 - 2026-10-29: "approved" → gate 0 approved for both cases.
 - 2026-10-29: "I'm happy with all of that for now. Let's move on to the next"
 - 2026-10-29: "I have connected with GitHub. Next time, when you ask me questions like "Your language was too complex for me," for now, even make a guess. I'm guessing what you said was right and accurate. Whenever you have questions for me next, keep the language as simple as possible, and make your explanations bigger and more simple so that I can understand what the implications are and what could have" → Rule: every question to the user uses very simple words, explains longer and more plainly what each choice means and what happens if they pick it, and avoids finance jargon (or explains it).

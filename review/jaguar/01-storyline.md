@@ -10,7 +10,7 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 3. Divider · 01 Case overview
 4. **Two British brands with a century of history and five owners** · timeline: Jaguar 1922, Land Rover 1948, British Leyland, BMW, Ford (1989/2000), Tata (2008) [src]
 5. **Tata bought JLR from Ford in June 2008 for US$2.3bn, just as the crisis hit** · deal facts, Ford's ~US$600m pension contribution [src]; volumes −32% in 10 months, FY2009 loss £402.4m (case p.2)
-6. **Two years later JLR earned £1,035.9m after tax** · FY2009–FY2011 results bars [src]; turnaround drivers
+6. **Three years later JLR earned £1,115m before tax on £9.9bn of revenue** · FY2011: wholesales 243,621 (+26%), revenue £9,871m (+51%), PBT £1,115m vs £51m [src: JLR release 28 Jul 2011]; PAT £1,035.9m (case p.2)
 7. **JLR sells premium SUVs and luxury cars worldwide from UK plants** · business model: brands and models, sales by region FY2015 [src], plants (UK + China JV 2014 [src])
 8. **The premium car market in 2015 was driven by SUVs and China** · industry drivers: premium SUV growth, China, emissions and diesel rules, heavy investment needs [src]
 9. **JLR is the smallest of the premium players against BMW, Mercedes-Benz and Audi** · 2014 volumes comparison chart (JLR 462k retail FY2015) [src]
@@ -29,7 +29,7 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 20. **Notes make up 92% of borrowing; the £1,485m revolving facility is completely undrawn** · composition chart
 21. **The two oldest notes cost the most: 8.125% and 8.25%, both callable in 2016** · notes ranked by coupon with call dates
 22. **Those two notes cost £34.0m a year more than JLR's 2015 coupons** · 263 × (8.125 − 3.5)% = £12.2m; 500 × (8.25 − 3.875)% = £21.9m
-23. **Each new note has carried a lower coupon: 8.125% in 2011 down to 3.5% in 2015** · Exhibit 1 coupons by issue date vs the matching Treasury on that date (chart) [src: issue dates; Treasury data] (also Q1 evidence)
+23. **Each new dollar note has carried a lower coupon: 8.125% in 2011 down to 3.5% in 2015** · US$ coupons by issue date (May 2011, Jan 2013, Dec 2013, Oct 2014, Mar 2015) vs the matching Treasury on that date (chart) [src: issue dates, some approximate; Treasury data] (also Q1 evidence)
 24. **Repayments run from 2018 to 2023, so there is no single maturity wall** · maturity ladder (£m per year)
 25. **Exhibit 1 converts dollars at about 1.56 (December 2014); the case uses 1.50 for March 2015** · 410/263 = 1.559 vs 1.50 → £263m vs £273.3m; why we keep the maths in US$
 26. **Exhibit 2: the 8.125% 2021 notes were quoted at 111.28, an 11% premium to face** · native table (ISINs: 144A and Reg S lines); "i" = indicative; price dated 4 Feb 2015, a month before the offer; second line stale (Aug 2014)
@@ -60,9 +60,9 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 49. **Like for like at 5 years, Treasuries fell only 26bp** · 1.83% → 1.57%
 50. **Test 1, the same bond: the 2011 notes' own yield fell from 8.125% at issue to 2.28% (to the call) in 2015** · same issuer, same bond (Exhibit 2)
 51. **Test 2, every issue: JLR's spread over Treasuries fell issue by issue** · spread at issue for each US$ note 2011–2015 (from slide 23) [src]
-52. **Test 3, the market: high-yield spreads overall moved [x]bp, JLR's moved 304bp** · market-wide BB/high-yield spread May 2011 vs Mar 2015 [src, if found; else this slide is cut and the limit stated]
+52. **Test 3, the market: high-yield spreads overall fell only about 40bp; JLR's fell 304bp** · US high-yield index ~502bp (May 2011, BofA Merrill Lynch via Bloomberg) vs ~460bp (Mar 2015, Fortune) [src; secondary sources, dates approximate] → about 260bp of the fall is JLR-specific
 53. **Why JLR's spread narrowed: a far safer borrower** · dashboard from Exhibits 4–6 (EBITDA margin, net cash, D/E, cover) + rating path
-54. **The 2015 notes are shorter, and lack the 2011 notes' call feature** · tenor (5 vs 10 years) and the call option investors were paid for in 2011 [src: new notes' call terms]
+54. **The 2015 notes are also shorter: 5 years instead of 10, with no call period to pay for** · tenor effect; the 2011 notes were sold as callable after five years, an option investors charged for [src]; the 2020 notes' redemption terms were not found, so no claim is made about them
 55. **Q1 answer: mostly JLR's better credit, a little lower rates and a shorter maturity** · summary with the waterfall
 
 ## 4 · Q2: what price would bondholders accept?
@@ -71,7 +71,7 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 58. **A bond's price has two parts: the clean price and accrued interest** · CFA definitions; the tender paid accrued separately
 59. **Accrued interest on 17 March 2015: 122 days → US$27.53 per US$1,000** · 30/360 step calc; matches the payment JLR made [src]; 31 March: 136 days → US$30.69
 60. **The cash flows still to come: US$40.625 every May and November, then US$1,000** · timeline to 2021
-61. **Method A, the naive view: discount to 2021 at JLR's new 3.5% rate → 125.43** · why 3.5% (JLR's current cost of debt), the 13 cash flows discounted (table over 2 slides)
+61. **Method A, the naive view: discount to 2021 at JLR's new 3.5% rate → 125.43** · why 3.5% (JLR's current cost of debt), the 13 cash flows discounted (table over 2 slides; repeats get their own slides, user decision)
 62. **Method A, continued: full price 128.18 − accrued 2.75 = clean 125.43, a 25% premium** · result
 63. **No holder will get 125: JLR can repay the notes in May 2016** · what a call option is; call schedule: before May 2016 make-whole, from 15 May 2016 at 104.0625% [src]
 64. **With an 8.125% coupon and a 3.5% market rate, JLR is certain to call: the bond behaves like a 14-month bond** · yield to call vs yield to maturity; yield-to-worst
@@ -84,7 +84,7 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 71. **Early tenders got US$1,123.52 per US$1,000, late ones US$1,093.52, both plus accrued interest** · early premium US$30 [src]
 72. **Four answers, one picture: 109.11, 111.28, 112.35 and 125.43** · reconciliation bar chart, each labelled with method and discount rate
 73. **Valuing the notes as if they ran to 2021 overstates them by about 13 points** · paying 125 would hand holders ~US$54m for an option JLR owns
-74. **If the notes mature in November rather than May 2021, the naive value is 127.26; the answer is unchanged** · case says 15 May 2021, JLR's filings 15 Nov 2021 [src]; only Method A moves *(depends on the user's choice)*
+74. **JLR's filings give 15 November 2021 as the maturity; using it moves only the naive value (127.26 vs 125.43), not our answer** · case date used throughout (user decision); filing quoted [src]
 75. **Q2 answer: holders would accept about 111–112 clean per 100 (US$456–461m for the issue) plus accrued interest** · summary
 
 ## 5 · Q3: incremental cash flows and savings
@@ -185,4 +185,4 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 - **23–28:** done (22, 23, 51, 12, 44, 92, 93, 96).
 
 **Open:**
-- **Slide 52** needs a published market-wide high-yield spread for May 2011 and March 2015. FRED no longer serves the old data, and a helper is searching. If nothing citable turns up, slide 52 is cut and slides 50–51 carry the test.
+- **Slide 52** uses market-wide high-yield spreads from secondary sources (Bloomberg via Business Standard; Fortune), labelled approximate. Re-check at gate 4.

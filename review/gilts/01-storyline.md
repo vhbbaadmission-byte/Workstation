@@ -53,11 +53,15 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 40. **Step 2: discount each cash flow at 3.00%** · table: year, cash flow, 1/1.03^t, PV (2.67, 2.59, 2.52, 2.44, 88.63)
 41. **Step 3: add them up: the 5-year gilt is worth £98.86** · sum; discount because 3.00% > 2.75%
 42. **A shortcut gives the same answer: annuity of coupons plus the PV of £100** · P = C × [1 − (1+y)^−N]/y + 100/(1+y)^N → 2.75 × 4.5797 + 86.26 = 98.86
-43–45. **The 2-, 10- and 30-year gilts: 106.84, 97.65, 102.32** · formula → numbers plugged in → result (*one slide each, or one combined: user's choice*)
+43. **The 2-year gilt at 1.74% is worth £106.84** · annuity formula → numbers plugged in → result
+44. **The 10-year gilt at 4.04% is worth £97.65** · same
+45. **The 30-year gilt at 4.36% is worth £102.32** · same
 46. **Yield from price, the easy case: the 1-year gilt yields 0.73%** · 102.50 = 103.25/(1+y) → y = 0.73%
 47. **Longer bonds need a search: bracket the 3-year yield between 2% and 3%** · price at 2% = 107.21, at 3% = 104.24; target 107.02
 48. **Interpolate, then check: the 3-year yield is 2.06%** · 2% + (107.21 − 107.02)/(107.21 − 104.24) × 1% = 2.064%; exact 2.063%; reprice at 2.063% = 107.02 ✓
-49–51. **The 7-, 20- and 50-year yields: 3.54%, 4.38%, 4.24%** · bracket → interpolate → exact → reprice check (*one slide each, or one combined: user's choice*)
+49. **The 7-year gilt at £108.91 yields 3.54%** · bracket (3%: 112.46, 4%: 106.00) → interpolate 3.550% → exact 3.541% → reprice check
+50. **The 20-year gilt at £104.93 yields 4.38%** · bracket (4%: 110.19, 5%: 96.88) → interpolate 4.395% → exact 4.375% → check
+51. **The 50-year gilt at £94.96 yields 4.24%** · bracket (4%: 100.00, 5%: 81.74) → interpolate 4.276% → exact 4.245% → check
 52. **Exhibit 1 completed** · full table, computed cells marked (bold + accent, readable in grey)
 53. **Paying coupons twice a year changes prices by at most 0.03 and yields by at most 1bp** · annual vs semi-annual table, price change for YTM-given bonds, bp change for price-given bonds
 
@@ -76,7 +80,9 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 ## 6 · Q4: what if all yields rise by 1%?
 64. Divider · 06 Q4: a 1% rise in all yields
 65. **Q4: every yield moves up by one percentage point at once** · parallel shift picture; "+1%" means 3.00% → 4.00%
-66–68. **Repricing the 1-, 10- and 50-year gilts at their new yields** · formula, plugged in, result: 102.50 → 101.49 (−0.98%); 97.65 → 90.06 (−7.78%); 94.96 → 78.11 (−17.74%) (*one slide each, or one combined: user's choice*)
+66. **At 1.73% the 1-year gilt falls from 102.50 to 101.49 (−0.98%)** · formula → numbers → result
+67. **At 5.04% the 10-year gilt falls from 97.65 to 90.06 (−7.78%)** · same
+68. **At 5.24% the 50-year gilt falls from 94.96 to 78.11 (−17.74%)** · same
 69. **Every gilt falls, and the 50-year falls 18 times as much as the 1-year** · results table, all nine
 70. **On a £1m holding, the 50-year loses £168,478; the 1-year £10,076** · money loss and PVBP (value of one basis point) table
 71. **Duration measures how long, on average, you wait for a bond's cash** · Macaulay duration concept, see-saw picture
@@ -156,4 +162,4 @@ One line per slide: **section · the point (becomes the title) · what it shows*
 
 **Not done:**
 - **13, the non-parallel shift:** CFA Level 1 only names shaping risk, and a numeric twist scenario would add slides without answering Q4, which asks about a parallel move. We mention it in one line on slide 65.
-- **8:** grader recommends the full version; **this is the user's choice** (see the gate question).
+- **8 (decided by user):** one slide per repeated calculation.

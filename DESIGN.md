@@ -2,6 +2,9 @@
 
 These are the user's rules. They override skill defaults **and the reference images**. Check every slide against them before showing it.
 
+## The standard
+**Claude Design level, not "a PowerPoint".** Think like a designer making a premium editorial deck, not like someone filling slide templates. Design happens in **Claude Slides** (see CLAUDE.md, gate 2). Every slide should look like it came out of Claude Design at its best: considered composition, generous space, a clear focal point, refined type. Then make it hold up as a `.pptx` on paper.
+
 ## Process
 1. **Design from the references** in `design/references/` (open and study all three before gate 2).
 2. **Then apply the `apple-design` skill as a polish pass** over that design. It's written for web UI, so use only the parts that apply to static slides: §12 materials and depth, §15 typography (optical size, tracking, leading), and §16 the design foundations (restraint, hierarchy, consistency). Skip its motion and gesture sections and its "Initial Response" greeting.
@@ -35,7 +38,19 @@ These are the user's rules. They override skill defaults **and the reference ima
 
 ## Slide basics
 - 16:9 widescreen (13.333 × 7.5 in).
-- Every slide: title, a slide number, and a source line when it uses data. The cover has the case name, Group 10, and the course; ask the user for names and course details at gate 0.
+- **Titles state the point** in plain words, at most 2 lines: "JLR's cheaper debt came from better credit, not lower rates", not "Yield Analysis". Section dividers and the cover can use short titles.
+- Every slide: title, slide number, and a source line when it uses data.
+- **Footers** (source line, slide number) may be **12pt**. Everything else is at least 18pt. Footer shapes are named `footer…` so `check_deck.py` applies the 12pt floor to them.
+- The cover has the case name, Group 10 and the course; the user will supply names and course details. The final slide holds each member's photo, full name and student ID (from the user; placeholder until then).
+
+## Colour, contrast and print
+The hard copy is printed one slide per page, possibly in greyscale. So:
+- Text colour against its background must reach a **contrast ratio of at least 4.5:1** (3:1 for text 24pt and up).
+- **Lime (direction B) is never a text colour** and never thin lines on white. Use it only as a fill behind black text or as a large shape.
+- Pale tints (lavender on indigo, grey on sage) are for shapes, not text.
+- Full dark backgrounds only for the cover and section dividers.
+- Never carry meaning with colour alone: up/down also gets a sign (+/−) or an arrow, and chart series also differ by position or a direct label.
+- Check every slide in greyscale before showing it.
 
 ## Don't
 - **No small text above titles.** Don't put an eyebrow, kicker or small caps label above every slide title. The title stands on its own.

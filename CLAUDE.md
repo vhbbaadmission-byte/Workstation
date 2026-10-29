@@ -34,7 +34,7 @@ Per case folder (`Jaguar/`, `UK Gilts/`):
 Note: `UK Gilts Questions.docx` lists its four questions twice. There are four questions, not eight.
 
 ## Level
-CFA Level 1 depth, for a BBA/MBA finance class. Every concept is explained before it's used, and every number is derived on the slide.
+CFA Level 1 depth, for a BBA/MBA finance class. Concepts are explained where the class would need them, and every number is derived on the slide.
 
 ## Hard rules (from the instructions)
 - Structure: **Case Overview → Exhibits Analysis → Main Case Analysis → Epilogue → final slide**. Follow the case's chronology where it makes sense.

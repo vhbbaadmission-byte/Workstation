@@ -144,6 +144,79 @@ def main():
     print(f"    Macaulay D = {res[10]['mac']:.2f} years; modified D = {res[10]['mac']:.2f}/(1+{y0:.4f}) = {res[10]['mod']:.2f}")
     print(f"    duration estimate = -{res[10]['mod']:.2f} x 1% = {-res[10]['mod']:.2f}%")
     print(f"    + convexity: 0.5 x {res[10]['cvx']:.2f} x 0.01^2 = +{100*0.5*res[10]['cvx']*1e-4:.2f}%  ->  {-res[10]['mod']+100*0.5*res[10]['cvx']*1e-4:.2f}%")
+    extras(res)
+
+
+def extras(res):
+    line = "=" * 78
+    print("\n" + line)
+    print("EXTRA (grader, gate 1)")
+    # current yield vs coupon vs YTM
+    print("  Coupon rate vs current yield vs YTM")
+    for n, v in res.items():
+        print(f"    {n:>2}y  coupon {v['c']:.2f}%  current yield {100*v['c']/v['p']:.2f}%  YTM {100*v['y']:.2f}%")
+    # annuity form
+    print("  Annuity form: P = C x [1-(1+y)^-N]/y + 100/(1+y)^N")
+    for n, v in res.items():
+        c, y = v["c"], v["y"]
+        ann = (1 - (1 + y) ** -n) / y
+        pvp = 100 / (1 + y) ** n
+        print(f"    {n:>2}y  {c:.2f} x {ann:.4f} + 100/{(1+y)**n:.4f} = {c*ann:.2f} + {pvp:.2f} = {c*ann+pvp:.2f}")
+    # interpolation for yield search
+    print("  Linear interpolation then reprice check (price-given bonds)")
+    for n in (3, 7, 20, 50):
+        c, p = res[n]["c"], res[n]["p"]
+        lo = int(res[n]["y"] * 100) / 100       # bracket by whole percent
+        hi = lo + 0.01
+        plo, phi = price(c, lo, n), price(c, hi, n)
+        yi = lo + (plo - p) / (plo - phi) * (hi - lo)
+        print(f"    {n:>2}y  y={100*lo:.2f}% -> {plo:.2f};  y={100*hi:.2f}% -> {phi:.2f};  interpolate: {100*lo:.2f}% + ({plo:.2f}-{p:.2f})/({plo:.2f}-{phi:.2f}) x 1% = {100*yi:.3f}%"
+              f"  | exact {100*res[n]['y']:.3f}%  | reprice at exact = {price(c, res[n]['y'], n):.2f}")
+    # approximate convexity and duration from +/- 1bp... use CFA approximation with dy = 1%
+    print("  CFA approximations with dy = 1%: ApproxModDur = (P- - P+)/(2 x P0 x dy); ApproxCon = (P- + P+ - 2P0)/(P0 x dy^2)")
+    for n in (1, 10, 50):
+        c, p0, y = res[n]["c"], res[n]["p"], res[n]["y"]
+        pm, pp = price(c, y - 0.01, n), price(c, y + 0.01, n)
+        print(f"    {n:>2}y  P- {pm:.2f}  P+ {pp:.2f}  P0 {p0:.2f}  ApproxModDur {(pm-pp)/(2*p0*0.01):.2f}  ApproxCon {(pm+pp-2*p0)/(p0*1e-4):.2f}")
+    # -1% scenario and asymmetry
+    print("  -1% vs +1% (asymmetry from convexity)")
+    for n, v in res.items():
+        c, p0, y = v["c"], v["p"], v["y"]
+        dn, up = price(c, y - 0.01, n), price(c, y + 0.01, n)
+        print(f"    {n:>2}y  -1%: {dn:7.2f} ({100*(dn/p0-1):+6.2f}%)   +1%: {up:7.2f} ({100*(up/p0-1):+6.2f}%)")
+    # money on a GBP 1m face holding and PVBP
+    print("  Money change on GBP 1,000,000 face, and PVBP (price value of a basis point) per GBP 1m face")
+    for n, v in res.items():
+        c, p0, y = v["c"], v["p"], v["y"]
+        dm = (price(c, y + 0.01, n) - p0) * 10000
+        pvbp = (price(c, y - 0.0001, n) - price(c, y + 0.0001, n)) / 2 * 10000
+        print(f"    {n:>2}y  value {p0*10000:,.0f}  change at +1% {dm:+,.0f}  PVBP {pvbp:,.0f}")
+    # bootstrapped spot and implied forward rates from 1,2,3-year bonds
+    z1 = res[1]["y"]
+    c2, p2 = res[2]["c"], res[2]["p"]
+    z2 = ((100 + c2) / (p2 - c2 / (1 + z1))) ** 0.5 - 1
+    c3, p3 = res[3]["c"], res[3]["p"]
+    z3 = ((100 + c3) / (p3 - c3 / (1 + z1) - c3 / (1 + z2) ** 2)) ** (1 / 3) - 1
+    f11 = (1 + z2) ** 2 / (1 + z1) - 1
+    f21 = (1 + z3) ** 3 / (1 + z2) ** 2 - 1
+    print("  Bootstrapped spot rates and implied 1-year forwards")
+    print(f"    z1 = {100*z1:.2f}%")
+    print(f"    z2: {p2:.2f} = {c2}/(1+{z1:.4f}) + {100+c2}/(1+z2)^2  ->  z2 = {100*z2:.2f}%")
+    print(f"    z3: {p3:.2f} = {c3}/(1+z1) + {c3}/(1+z2)^2 + {100+c3}/(1+z3)^3  ->  z3 = {100*z3:.2f}%")
+    print(f"    1y forward in 1 year (1y1y) = (1+z2)^2/(1+z1) - 1 = {100*f11:.2f}%;  2y1y = {100*f21:.2f}%")
+
+    # reinvestment risk: 20-year 4.75% bought at 104.93 (YTM 4.38%), held to maturity
+    print("  Reinvestment risk: 20-year 4.75% gilt bought at 104.93, held 20 years")
+    c, p0, n = 4.75, res[20]["p"], 20
+    for r in (res[20]["y"], 0.02, 0.0):
+        fv = sum(c * (1 + r) ** (n - t) for t in range(1, n + 1)) + 100
+        print(f"    coupons reinvested at {100*r:.2f}%: end value {fv:.2f}; realised return ({fv:.2f}/{p0:.2f})^(1/20) - 1 = {100*((fv/p0)**(1/n)-1):.2f}%")
+    # coupon effect: same maturity, different coupon (hypothetical 10y 0% and 8% at 4.04%)
+    print("  Coupon effect on rate risk (hypothetical 10-year bonds at 4.04%)")
+    for c in (0.0, 3.75, 8.0):
+        y = res[10]["y"]
+        p0, p1 = price(c, y, 10), price(c, y + 0.01, 10)
+        print(f"    coupon {c:.2f}%  P0 {p0:.2f}  +1% {p1:.2f}  change {100*(p1/p0-1):+.2f}%  ModD {macaulay(c, y, 10)/(1+y):.2f}")
 
 
 if __name__ == "__main__":

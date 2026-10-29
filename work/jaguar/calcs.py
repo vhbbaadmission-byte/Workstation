@@ -270,6 +270,70 @@ def extras():
     print(f"  issuer call value implied: straight {clean_price(0.035, SETTLE, MATURITY, 100):.2f} - market {MKT_PRICE:.2f} = {clean_price(0.035, SETTLE, MATURITY, 100)-MKT_PRICE:.2f}; - tender {TENDER_TOTAL:.2f} = {clean_price(0.035, SETTLE, MATURITY, 100)-TENDER_TOTAL:.2f}")
 
 
+def q3_consistent():
+    """Q3/Q4 with discount rates matched to each baseline's horizon (strict review, gate 1)."""
+    line = "=" * 78
+    print(line, "\nQ3 (CONSISTENT RATES)  per US$410m face, settle", SETTLE)
+    t, ai = accrued(SETTLE)
+    w = (180 - t) / 180
+    y_call_mkt = solve_y(MKT_PRICE, MKT_DATE, CALL_DATE, CALL_PRICE)   # 2.28%: market yield to call
+    y_tender = (REF_YIELD + FIXED_SPREAD) / 100                         # 0.895%
+    cash_now = FACE * (TENDER_TOTAL + ai) / 100
+    print(f"  cash paid now (price + accrued): 410 x ({TENDER_TOTAL:.3f} + {ai:.4f})% = {cash_now:.2f}")
+
+    def pv_table(end, redemption, y, label):
+        dates = coupon_dates(date(2015, 5, 15), end)
+        print(f"  PV of old flows avoided: {label}, discounted at {100*y:.3f}% a year ({100*y/2:.4f}% per half-year)")
+        print("    date         periods   cash flow   discount factor   PV")
+        tot = 0
+        for i, d in enumerate(dates):
+            cf = FACE * (OLD_CPN / 200 + (redemption / 100 if d == end else 0))
+            n = i + w
+            df = 1 / (1 + y / 2) ** n
+            tot += cf * df
+            print(f"    {d}   {n:6.4f}   {cf:9.2f}   {df:.6f}        {cf*df:8.2f}")
+        print(f"    total PV {tot:.2f};  NPV = PV avoided - cash paid = {tot:.2f} - {cash_now:.2f} = {tot-cash_now:+.2f}")
+        return tot - cash_now
+
+    a = pv_table(MATURITY, 100, NEW_CPN / 100, "naive: held to May 2021 at 3.50% (JLR's 5-6 year cost)")
+    b = pv_table(CALL_DATE, CALL_PRICE, y_call_mkt, "realistic: called May 2016, at the market's 14-month yield to call")
+    c = pv_table(CALL_DATE, CALL_PRICE, y_tender, "realistic: called May 2016, at the tender's 0.895%")
+    print(f"  summary NPV (US$m): naive {a:+.1f}; realistic @2.28% {b:+.1f}; realistic @0.895% {c:+.1f}; vs market price {FACE*(MKT_PRICE-TENDER_TOTAL)/100:+.1f}")
+    v_call = clean_price(y_call_mkt, SETTLE, CALL_DATE, CALL_PRICE)
+    print(f"  per 100 (clean): value to call @{100*y_call_mkt:.2f}% = {v_call:.2f}; tender 112.35 -> holders' gain {TENDER_TOTAL-v_call:+.2f} (x4.10 = {4.1*(TENDER_TOTAL-v_call):+.1f}); vs market {TENDER_TOTAL-MKT_PRICE:+.2f} (x4.10 = {4.1*(TENDER_TOTAL-MKT_PRICE):+.1f})")
+
+    # why NPV of all incremental flows = PV(old avoided) - cash paid: new debt at par has PV = amount borrowed
+    B = cash_now
+    pv_new = 0
+    d, k = date(2015, 9, 15), 0
+    while d <= date(2020, 3, 15):
+        n = days360(SETTLE, d) / 180
+        cf = B * NEW_CPN / 200 + (B if d == date(2020, 3, 15) else 0)
+        pv_new += cf / (1 + NEW_CPN / 200) ** n
+        d = date(d.year + (d.month == 9), 3 if d.month == 9 else 9, 15)
+    print(f"  check: PV at 3.50% of the new-debt flows on {B:.2f} borrowed = {pv_new:.2f} (≈ amount borrowed, so new debt adds ~0 NPV)")
+
+    # after-tax, step by step
+    TAX_NOW = 0.21     # UK main rate for the financial year beginning 1 Apr 2014 (deal date 17 Mar 2015)
+    prem = FACE * (TENDER_TOTAL - 100) / 100
+    print("  AFTER TAX")
+    print(f"    premium {prem:.2f} deductible at 21% (FY2014 rate, deal date 17 Mar 2015): tax saved {TAX_NOW*prem:.2f}; after-tax cash now {cash_now - TAX_NOW*prem:.2f}")
+    for label, end, red, y in (("naive hold to 2021", MATURITY, 100, NEW_CPN / 100), ("realistic call 2016", CALL_DATE, CALL_PRICE, y_call_mkt)):
+        ya = y * (1 - TAX)
+        dates = coupon_dates(date(2015, 5, 15), end)
+        tot = 0
+        for i, d in enumerate(dates):
+            cpn = FACE * OLD_CPN / 200
+            cf = cpn * (1 - TAX)
+            if d == end:
+                cf += FACE * red / 100 - (FACE * (red - 100) / 100) * TAX   # call premium also deductible
+            tot += cf / (1 + ya / 2) ** (i + w)
+        npv = tot - (cash_now - TAX_NOW * prem)
+        print(f"    {label}: after-tax old flows at {100*ya:.3f}% = {tot:.2f}; NPV = {tot:.2f} - {cash_now - TAX_NOW*prem:.2f} = {npv:+.2f}")
+    print(f"  Exhibit 1 coupon cost in GBP at 1.50: US$410m = £{410/FX:.1f}m; excess coupon (8.125-3.5)% = £{410/FX*0.04625:.1f}m/yr; plus £500m x (8.25-3.875)% = £{500*0.04375:.1f}m; total £{410/FX*0.04625+500*0.04375:.1f}m")
+
+
 if __name__ == "__main__":
     main()
     extras()
+    q3_consistent()

@@ -26,7 +26,7 @@ H7. **Finance is correct at CFA Level 1:** definitions, formulas, conventions (c
 H8. **Numbers are right:** spot-check at least 15 numbers in the plan against `calcs.py` output, `exhibits.csv` or the sources files. Any mismatch beyond rounding is blocking. Number formats: money to 1 dp, prices to 2 dp, yields to 2 dp, bp whole.
 H9. **User decisions are honoured** (from PROGRESS.md). For example, Jaguar: call-aware Q2 first, US$ maths with one conversion at 1.50, the case's May 2021 maturity plus one note slide, one slide per repeated calculation. Gilts: annual coupons plus one semi-annual comparison, gilt names only when certain, one slide per repeated calculation.
 H10. **Known traps** in CLAUDE.md are handled (each one explicitly).
-H11. **Lucidity (user's top criterion).** Imagine a reader with only a very basic grasp of finance, reading on paper with no presenter. For EVERY slide, ask: would they understand what is being said and why it matters? Lucidity does NOT mean removing complex analysis. It means the complexity is shown and explained clearly:
+H11. **Lucidity (user's top criterion).** The reader is a student part-way through CFA Level 1: they know the basics (time value of money, what a bond is) but have not mastered every topic (e.g. callable bonds, convexity, spot/forward rates, refinancing NPV). They read on paper with no presenter. Lucidity must NEVER come from simplifying or dropping analysis: the full professional analysis must be there, presented so this reader can follow it. For EVERY slide, ask: would they understand what is being said and why it matters? Lucidity does NOT mean removing complex analysis. It means the complexity is shown and explained clearly:
    - each technical term (YTM, spread, accrued interest, call option, duration, convexity, NPV, bp…) is defined in plain words before or where it is first used
    - each formula is explained in words before the numbers are plugged in
    - each number says what it is and its unit
@@ -39,7 +39,7 @@ H11. **Lucidity (user's top criterion).** Imagine a reader with only a very basi
 Q1 Depth of analysis (beyond the obvious; tests claims rather than asserting them)
 Q2 Logic and flow (chronology where sensible, each slide earns its place, no repetition)
 Q3 Use of evidence (case, exhibits, external sources, used as evidence and not decoration)
-Q4 Lucidity: a basic-level reader with no presenter understands every slide (see H11); score 5 only if no slide would lose them
+Q4 Lucidity: a part-way CFA Level 1 reader with no presenter follows every slide, with no analysis dropped (see H11); score 5 only if no slide would lose them
 Q5 Calculations (complete, traceable, readable, nothing skipped)
 Q6 Overview and epilogue (informative, current, tied back to the case decision)
 

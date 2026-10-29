@@ -145,6 +145,7 @@ def main():
     print(f"    duration estimate = -{res[10]['mod']:.2f} x 1% = {-res[10]['mod']:.2f}%")
     print(f"    + convexity: 0.5 x {res[10]['cvx']:.2f} x 0.01^2 = +{100*0.5*res[10]['cvx']*1e-4:.2f}%  ->  {-res[10]['mod']+100*0.5*res[10]['cvx']*1e-4:.2f}%")
     extras(res)
+    strict_extras(res)
 
 
 def extras(res):
@@ -217,6 +218,57 @@ def extras(res):
         y = res[10]["y"]
         p0, p1 = price(c, y, 10), price(c, y + 0.01, 10)
         print(f"    coupon {c:.2f}%  P0 {p0:.2f}  +1% {p1:.2f}  change {100*(p1/p0-1):+.2f}%  ModD {macaulay(c, y, 10)/(1+y):.2f}")
+
+
+def strict_extras(res):
+    print("\n" + "=" * 78)
+    print("STRICT REVIEW ADDITIONS (gate 1)")
+    # reinvestment FV formula
+    c, p0, n = 4.75, res[20]["p"], 20
+    for r in (res[20]["y"], 0.02):
+        f = ((1 + r) ** n - 1) / r
+        fv = c * f + 100
+        print(f"  FV of coupons at {100*r:.2f}%: 4.75 x [(1+r)^20 - 1]/r = 4.75 x {f:.2f} = {c*f:.2f}; + 100 = {fv:.2f};"
+              f" realised return = ({fv:.2f}/{p0:.2f})^(1/20) - 1 = {100*((fv/p0)**(1/n)-1):.2f}%")
+    # semi-annual worked example: 2-year at 1.74%
+    print("  Semi-annual worked example: 2-year 5.25% at 1.74% a year = 0.87% per half-year")
+    tot = 0
+    for k in range(1, 5):
+        cf = 2.625 + (100 if k == 4 else 0)
+        df = 1 / 1.0087 ** k
+        tot += cf * df
+        print(f"    half-year {k}: {cf:7.3f} x 1/1.0087^{k} ({df:.6f}) = {cf*df:7.3f}")
+    print(f"    price = {tot:.2f} (annual-pay 106.84)")
+    # Macaulay duration step tables for all nine
+    for n, v in res.items():
+        c, y, p0 = v["c"], v["y"], v["p"]
+        rows = [(t, cf, cf / (1 + y) ** t) for t, cf in cash_flows(c, n)]
+        mac = sum(t * pv for t, cf, pv in rows) / p0
+        print(f"  Duration {n}y (c {c}%, y {100*y:.2f}%, P {p0:.2f}): MacD = sum(t x PV)/P = {sum(t*pv for t,cf,pv in rows):.2f}/{p0:.2f} = {mac:.2f};"
+              f" ModD = {mac:.2f}/(1+{y:.4f}) = {mac/(1+y):.2f}")
+        if n in (5, 50):
+            show = rows if n == 5 else rows[:3] + rows[-2:]
+            for t, cf, pv in show:
+                print(f"      t={t:>4.0f}  CF {cf:7.2f}  PV {pv:7.2f}  weight {pv/p0:.4f}  t x weight {t*pv/p0:.4f}")
+    # analytic convexity step: 10y and 50y
+    for n in (10, 50):
+        c, y, p0 = res[n]["c"], res[n]["y"], res[n]["p"]
+        sm = sum(t * (t + 1) * cf / (1 + y) ** t for t, cf in cash_flows(c, n))
+        print(f"  Convexity {n}y: sum[t(t+1) x PV(CF)] / [P x (1+y)^2] = {sm:.1f} / ({p0:.2f} x {(1+y)**2:.4f}) = {sm/(p0*(1+y)**2):.2f}")
+    # -1% worked (50y) and money on GBP 100m face
+    c, y, p0 = 4, res[50]["y"], res[50]["p"]
+    ann = (1 - (1 + y - 0.01) ** -50) / (y - 0.01)
+    print(f"  -1% worked, 50y: y = {100*(y-0.01):.2f}%: 4 x {ann:.4f} + 100/{(1+y-0.01)**50:.4f} = {4*ann:.2f} + {100/(1+y-0.01)**50:.2f} = {price(4, y-0.01, 50):.2f} ({100*(price(4,y-0.01,50)/p0-1):+.2f}%)")
+    print("  Money on GBP 100m face: value, change at +1%, PVBP (GBP m)")
+    for n, v in res.items():
+        c, p0, y = v["c"], v["p"], v["y"]
+        print(f"    {n:>2}y  value £{p0:.1f}m  +1%: £{price(c, y+0.01, n)-p0:+.1f}m  PVBP £{(price(c,y-0.0001,n)-price(c,y+0.0001,n))/2:.3f}m")
+    c, y = 4, res[50]["y"]
+    print(f"  PVBP worked, 50y: [P(y-0.01%) - P(y+0.01%)]/2 = [{price(c,y-0.0001,50):.4f} - {price(c,y+0.0001,50):.4f}]/2 = {(price(c,y-0.0001,50)-price(c,y+0.0001,50))/2:.4f} per £100 -> £{(price(c,y-0.0001,50)-price(c,y+0.0001,50))/2:.4f}m per £100m")
+    # real-bond test: 4% Treasury Gilt 2060 (DMO 9 May 2014: clean 114.76, yield 3.364984%, ModD 22.24)
+    y0, y1, p_then, p_now, md = 3.364984, 5.737, 114.76, 75.28, 22.24
+    print(f"  Real bond, 4% 2060: yield {y0:.2f}% -> {y1:.2f}% (+{100*(y1-y0):.0f}bp); duration-only estimate -{md} x {(y1-y0)/100:.4f} = {-md*(y1-y0):.1f}%;"
+          f" actual {p_then} -> {p_now} = {100*(p_now/p_then-1):.1f}%  [latest price/yield secondary source, verify]")
 
 
 if __name__ == "__main__":

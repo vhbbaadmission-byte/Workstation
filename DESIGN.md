@@ -65,6 +65,8 @@ The hard copy is printed one slide per page, possibly in greyscale. So:
 These make up a large part of the deck. Lay each one out as **formula → numbers plugged in → result**, with the result in large type and the accent colour. One step per slide if needed; never shrink text to fit.
 
 ## User design feedback, word for word
+- 2026-10-29: "use lucidity is a very important factor. Can someone go into it and understand what the strength is and what is being said? Is it being understood? Even if the presenter was removed, would it still be understood? The slide, in the context of that, is lucid if someone with a very basic understanding would understand what's being said. I think, in your current context, there is a bit of lucidity. Lucidity does not mean removing stuff or removing complex analysis. It just means ensuring that they are shown or explained clearly. For any helpers, this and feature content are very major criteria."
+  → **Lucidity rule:** every slide must be understood by a reader with basic finance and no presenter. Never cut analysis to achieve it. Instead: define each term the first time it appears (one plain line), say in words what each formula means before the numbers, label every number with what it is and its unit, end each calculation with a one-line "so what", and put the slide's point in its title.
 - 2026-10-29: "as for the designs ensure you use the claude design style workflow to achieve that levle of quality and accuracy" → gate 2 is designed in the Claude Slides artifact following its own design workflow (direction → palette/type scale → layouts → slides), not hand-built in code.
 
 ## Still to come from the user

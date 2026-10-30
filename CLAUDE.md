@@ -67,7 +67,7 @@ The user works like a director with an editor: **no long builds without sign-off
 2. **Independent check:** a `sonnet-worker` solves the same questions from the case alone, without seeing your answers. Compare its numbers with yours and with the teaching note. Explain every difference in `answers.md`; never hide one. Tag each answer: *solid*, *debatable* or *uncertain*.
 3. Write `01-storyline.md`: one line per slide, giving its section, **the point it makes** (this becomes its title), and what it shows (which exhibit, calculation, chart or source). Never fix how many bullets, rows or boxes a slide has.
 4. Add an **instructions checklist**: every requirement in the instructions → the slide numbers that meet it.
-5. **Grader review:** run the `grader` agent on `01-storyline.md`. Fix what you agree with; for the rest, say why not. Show its report and your response at the gate.
+5. **Grader review:** run the `grader` agent on `01-storyline.md`. Fix what you agree with; for the rest, say why not. Then run the **strict review** (`grader` with `review/shared/review-rubric.md`) until it returns READY. Show the reports and your responses at the gate.
 6. Where showing every step would flood the deck (e.g. pricing nine gilts), propose how to show it (e.g. one full worked example, then a results table with the formula stated) and **let the user choose**. **Stop.**
 
 ### Gate 2: The look (once, shared by both decks)
@@ -96,6 +96,31 @@ Sections: Overview → Exhibits → each Question → Epilogue → Final slide.
 4. Print check: view every slide in greyscale; fix anything that becomes hard to read.
 5. `humanizer` pass on the slide text: wording only. **Diff every number before and after; they must not change.**
 6. Write `04-qc.md` with the results, and remind the user to embed fonts (DESIGN.md → Fonts) and flip through the deck in real PowerPoint. **Stop.**
+
+## Standing rules from the user (added through 2026-10-30; they override anything above)
+- **Lucidity is a top, pass/fail criterion.** Every slide must be followed, on paper and with no presenter, by a student part-way through CFA Level 1 (knows the basics, has not mastered every topic). Never get there by cutting or simplifying analysis: keep the full professional analysis and explain it. In practice:
+  - define each term in plain words where it first appears
+  - explain each formula in words before plugging in numbers
+  - label every number with what it is and its unit
+  - end each calculation with a one-line "so what"
+  - put concepts before the slides that use them
+  - make titles say the point
+- **One slide per repeated calculation** (formula → numbers → result), after the first full worked example.
+- **Questions to the user:** always multiple choice (AskUserQuestion), in very simple words. For each question say why it arose, what each option means, what happens if they pick it, and which you recommend and why.
+- **Independent review with strict criteria.** Every review helper gets `review/shared/review-rubric.md`: hard requirements H1–H11, quality scores of at least 4/5, a READY verdict only at A− or better. Every helper brief carries tough, explicit pass/fail criteria and all project restrictions.
+- **Delegated approval:** for gate 1 the user said "If they approve it, it is approved from my side … move on to the next stage." When both strict reviews return READY, gate 1 counts as Approved. Otherwise only the word "Approved" moves a gate.
+- **Decisions already made:**
+  - Jaguar: Q2 leads with the value to the 2016 call; bond maths in US$, converted once at 1.50; use the case's maturity (15 May 2021) plus one note on the filing's 15 Nov 2021.
+  - Gilts: annual coupons plus one semi-annual comparison; name a real gilt only if the match is certain (none is).
+  - See PROGRESS.md for the full list.
+
+## Environment notes (learned 2026-10-29/30)
+- The session needs full network access (the user enabled it).
+- WebFetch fails on some hosts where `curl` through the proxy works (dmo.gov.uk, bankofengland.co.uk, home.treasury.gov CSVs).
+- sec.gov blocks automated tools. Do not try to get around it.
+- FRED no longer serves the pre-2023 ICE high-yield spread history.
+- The DMO's live gilt prices are behind a captcha. Use the DMO's annual reference-price XLS files.
+- scipy may need `pip install scipy` before running the `calcs.py` files.
 
 ## When to stop and ask, even between gates
 - Your answer and the teaching note differ by more than rounding.
@@ -160,7 +185,7 @@ Rules:
 - `scripts/check_deck.py deck.pptx`: rule checks; exit code 1 on failure. Self-test: `python3 scripts/test_check_deck.py`. On a Claude Slides export, if a failure comes from how the export is structured (e.g. sizes inherited from the layout) rather than a real problem, confirm it visually and note it in the QC report.
 
 ## Git and files
-- Commit and push to `main` after every gate and every built section. Always `git pull --rebase` before pushing. The two cases have separate folders, so parallel sessions shouldn't collide.
+- Commit and push after every gate and every built section, to the branch the session is assigned (the user agreed on 2026-10-29 that the session branch is fine; all work so far is on `claude/eloquent-cray-g3ajd9`, not yet merged to `main`). Always `git pull --rebase` before pushing. The two cases have separate folders, so parallel sessions shouldn't collide.
 - `materials/`: unzipped inputs (gitignored)
 - `work/<case>/`: `exhibits.csv`, `calcs.py`, `answers.md`, `sources.md`
 - `review/PROGRESS.md`: status, approvals, feedback, decisions

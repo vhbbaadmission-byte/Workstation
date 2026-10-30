@@ -17,13 +17,13 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 4. **A gilt is a loan to the UK government that pays fixed interest twice a year** · cash-flow diagram: £1,000 of 4% Treasury Gilt 2016 pays £20 every March and September, then £1,000 back (case p.2). Plain: face value, coupon, maturity.
 5. **A gilt's name gives its coupon and repayment year; its price is quoted per £100 of face value** · "4% Treasury Gilt 2060" annotated. So what: a price of 102.50 means £102.50 per £100 [src]
 6. **Conventional gilts pay fixed cash; index-linked gilts pay cash that rises with inflation** · side-by-side; this case covers conventional gilts only (case p.2)
-7. **The UK has never missed a gilt payment, so gilts set the UK's risk-free rate** · DMO quote (case p.2); UK ratings 2014 vs today [src]. Plain: risk-free rate = the return on a loan with no real chance of default; AAA/AA = the agencies' top grades
+7. **The UK has never missed a gilt payment, so gilts set the UK's risk-free rate** · DMO quote (case p.2); ratings: 2014 vs today, only those verified in sources.md (Fitch AA- today, secondary) [src]. Plain: risk-free rate = the return on a loan with no real chance of default; AAA/AA = the agencies' top grades
 8. **The Debt Management Office (DMO) sells gilts for the Treasury, mostly at 5, 10 and 30 years** · issuance; 50-year gilts since 2005, thinly traded (case p.2) [src]
 9. **The gilt market has doubled: £1,365bn in 2014, £2,817bn in 2026** · bar chart, conventional vs index-linked, same DMO basis [src]
 10. **QE: since 2009 the Bank of England has created money to buy gilts and push yields down** · Plain: QE (quantitative easing) in one line [src]; Bank Rate 0.50% from Mar 2009; £375bn of gilts bought by 2014 [src]. So what: in 2014 the Bank was one of the biggest buyers
 11. **In 2014 three groups held over 80% of gilts: overseas investors, pension funds and insurers, and the Bank of England** · holdings chart 29% / 27% / 26% (Bank figure footnoted as "end-2014" per DMO) [src]
-12. **The UK borrowed heavily after 2008: net debt rose from [x]% of GDP to [y]%** · debt and deficit 2007-08, 2013-14, latest [src; slide cut if not sourced]
-13. **Gilts compete with US Treasuries and German Bunds for the world's savings** · 10-year yields May 2014 and today [src; cut if not sourced]. Plain: Treasuries and Bunds = the US and German governments' bonds; sovereign spread = the extra yield one government pays over another
+12. **UK government debt more than doubled as a share of GDP, from 35.6% in 2008 to 78.6% in 2014** · net debt % GDP: Mar 2008 35.6, Mar 2014 78.6, Mar 2026 93.2; borrowing % GDP: 2.9 / 5.6 / 4.4 (ONS, current vintage) [src]. Plain: net debt = what the government owes minus its liquid assets. So what: more gilts to sell, and investors to persuade
+13. **In May 2014 a 10-year gilt paid 2.77%, against 2.62% in the US and 1.50% in Germany** · today 5.30% / 4.98% / 3.39% (BoE, US Treasury, Bundesbank fitted par yields) [src]. Plain: Treasuries and Bunds = the US and German governments' bonds; sovereign spread = the extra yield one government pays over another (gilt − Bund: 127bp then, 191bp now)
 14. **The case: Petr Cech must price nine gilts and measure their risk for his trading desk** · setting (MU Securities); why a desk needs fair prices (to spot over- or under-priced bonds) and risk numbers (to set limits and hedge) (case p.1)
 15. **Five ideas we use throughout: price per £100, coupon, yield to maturity, premium/discount, and the basis point** · primer, one plain line each. YTM = the single interest rate at which the bond's future cash, discounted, equals its price; premium = price above 100; discount = below 100; 1 basis point (bp) = 0.01 percentage point
 16. **Each question needs one CFA tool: time value of money, YTM, the yield curve, duration and convexity** · Q1–Q4 mapped to tools
@@ -133,13 +133,13 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 ## 7 · Epilogue
 109. Divider · 07 Epilogue
 110. **What we found: coupon ≠ return, a rising curve, and risk that grows with maturity** · four findings, one per question
-111. **After 2014 gilt yields kept falling, to record lows in 2020** · 10-year gilt yield 2014–2021 [src; level and date]
-112. **The 2016 Brexit vote cost the UK its last AAA rating** · S&P AAA → AA, 27 Jun 2016 [src]
+111. **After 2014 gilt yields kept falling, to a record low of 0.12% in August 2020** · BoE 10-year par yield: 2.77% (9 May 2014) → 0.12% (4 Aug 2020, lowest since the series began in 1993) [src]
+112. **After the 2016 Brexit vote, S&P cut the UK from AAA to AA** · June 2016 [src, secondary: Euronews]
 113. **From December 2021 inflation returned, and Bank Rate rose from 0.10% to 5.25% by August 2023** · Bank Rate chart [src: BoE]
-114. **September 2022: long gilt yields jumped over 100bp in four days and the Bank had to step in** · Plain: LDI (liability-driven investment) funds = pension strategies that borrowed against gilts; falling prices forced them to post more cash (margin calls) and sell gilts. BoE bought £19.3bn, 28 Sep – 14 Oct 2022 [src]
+114. **September 2022: long gilt yields jumped over 100bp in four days and the Bank had to step in** · Plain: LDI (liability-driven investment) = strategies pension schemes use to match their assets to their long-term promises (BoE FSR Dec 2022 [src]), often with borrowed money; falling gilt prices forced them to post cash (margin calls) and sell gilts. BoE bought £19.3bn, 28 Sep – 14 Oct 2022 [src]
 115. **Our 1% scenario happened, though not as a parallel shift: the long end moved most** · BoE: "a 100 basis point increase in yields for a 20 year gilt maps to roughly a 20% price fall" vs our −11.89% (20-year); the gap is the coupon effect (slide 98) [src]
-116. **Then the Bank reversed QE and began selling gilts** · Plain: QT (quantitative tightening) = the reverse of QE. Start dates [src]; holdings down from £895bn to £488bn [src]
-117. **A real 50-year gilt shows Q4 in practice: the 4% 2060 fell from £114.76 to about £75** · yield 3.36% → 5.74% (+237bp); duration alone predicts −52.8%, actual −34.4%; the difference is convexity plus 12 fewer years to maturity [src; latest price re-verified]
+116. **Then the Bank reversed QE: it stopped reinvesting in February 2022 and began selling gilts in November 2022** · Plain: QT (quantitative tightening) = the reverse of QE [src: BoE]; holdings down from £895bn to £488bn [src]
+117. **A real 50-year gilt shows Q4 in practice: the 4% 2060 fell from £114.76 to £75.28** · yield 3.36% → 5.74% (+237bp); duration alone (22.24) predicts −52.8%, actual −34.4%; the gap is convexity plus 12 fewer years to maturity (its duration today is 15.73) [src: DMO 2014; today secondary, giltsyield.com]
 118. **Today Bank Rate is 3.75% and gilt yields are higher than in 2014 at every maturity** · today's curve vs Exhibit 1 vs real May 2014 (chart) [src: BoE, sources.md]; next Bank Rate decision 5 Nov 2026 (re-check before submission)
 119. **Lessons: the coupon is not the return, the curve carries information, and duration is the price of extra yield** · closing
 
@@ -167,7 +167,7 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 - **B1 (repeats):** +1% repricing for all nine (74–82); duration for all nine (87–96); convexity split (101–102); worked −1% (105) and PVBP (85) before their tables.
 - **B2:** one convexity measure throughout (analytic: 81.56 / 701.03, derived on 101–102); the price-based measure is a labelled cross-check on 104, with "by construction" made explicit.
 - **B3:** reinvestment FV formula (29–30); semi-annual worked example (55); bootstrap split into 62–65.
-- **B4:** `work/gilts/sources.md` being built (strict helper). Slides 12–13 are cut if their facts can't be sourced; 111, 112, 116 and 7 are sourced or reworded.
+- **B4:** `work/gilts/sources.md` is built. Slides 12, 13, 111 and 116 are verified from primary sources (ONS, US Treasury, Bundesbank, BoE). Slide 112 and today's Fitch rating are labelled secondary. S&P's and Moody's current ratings could not be verified, so they are dropped from slide 7.
 - **B5:** slide 113 now says December 2021.
 - **B6 (lucidity):** a primer (15); every term defined where first used (Plain:); concepts before use (spot/forward on 61, before the bootstrap; QE on 10, before holdings on 11); every calculation ends with a So what.
 - **B7:** slide 54 and 67 titles are now points; long titles shortened, with the detail moved to the body.

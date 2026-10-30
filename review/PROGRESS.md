@@ -5,13 +5,16 @@ Read this at the start of every session. Update it at every gate and after every
 ## Status
 | | Jaguar | UK Gilts |
 |---|---|---|
-| Current gate | 1 — done, waiting for approval | 1 — done, waiting for approval |
+| Current gate | 1 — round 3 plan done; strict review not yet READY | 1 — round 3 fixes applied; strict review r3 said A− once fixed |
 | Last approved | Gate 0 (2026-10-29) | Gate 0 (2026-10-29) |
 
 Shared gate 2 (look): not started · Build tool: not decided · Claude Slides link: https://claude.ai/artifact/FDSxNWFitiAfajUBNh6h5X (created empty at gate 0 as the tool test; used at gate 2)
 
 ## Next step
-User reviews gate 1 (answers + storylines for both cases) and answers two questions: Jaguar maturity date; how to show repeated calculations. On "Approved": gate 2 (the look).
+Session paused for handover (user, 2026-10-30). The next session:
+1. Read `HANDOVER.md`, then this file, CLAUDE.md and DESIGN.md.
+2. Run the strict review (`grader` with `review/shared/review-rubric.md`) on `review/gilts/01-storyline.md` (round 4) and `review/jaguar/01-storyline.md` (round 3). Fix and repeat until both are READY.
+3. When both are READY, gate 1 counts as approved (user's delegated approval) → start gate 2 (the look) in the Claude Slides artifact.
 
 ## Already settled with the user (before gate 0)
 - Two decks, one design system shared by both.

@@ -14,12 +14,12 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 
 ## 1 · Case overview
 3. Divider · 01 Case overview
-4. **Two British brands, a century old, with five owners along the way** · ownership timeline [src]
+4. **Two British brands, a century old, owned by Ford and then Tata** · timeline: Jaguar 1922 (Swallow Sidecar), Land Rover 1948 [src: JLR]; Ford bought Jaguar in 1989 and Land Rover from BMW in 2000 (€3bn) [src, secondary]; Tata 2008 [src: JLR]; earlier British Leyland/BMW years only as background (not sourced to primary)
 5. **Tata bought JLR from Ford in June 2008 for US$2.3bn, as the crisis hit** · deal facts [src]; volumes −32% in 10 months, FY2009 loss £402.4m (case p.2)
 6. **Three years later JLR made £1,115m before tax on £9.9bn of revenue** · FY2011: wholesales 243,621 (+26%), revenue £9,871m (+51%), PBT £1,115m vs £51m [src]; profit after tax £1,035.9m (case p.2)
-7. **JLR sells premium SUVs and luxury cars worldwide, made in the UK and China** · brands, sales by region FY2015, Changshu JV plant [src]
-8. **Premium carmakers in 2015 grew on SUVs and China, under tightening emissions rules** · industry drivers [src]
-9. **JLR is the smallest of the premium players** · 2014 deliveries: BMW, Mercedes-Benz, Audi, Porsche vs JLR [src]
+7. **JLR sold 462,209 vehicles in FY2015; China was its biggest market** · by region: China 115,969, Europe 87,863, UK 86,750, North America 78,372, Asia Pacific 26,619, other 66,636; Changshu plant with Chery opened Oct 2014 (130,000 capacity) [src: JLR FY2015 report, release]
+8. **Premium carmakers grew on SUVs and China, while the EU set a 95g CO2/km target for 2020** · Land Rover brand +8.9% in FY2015 to 385,279 [src: JLR]; EU Regulation 333/2014 [src]. Plain: CO2 g/km target = the average emissions limit per car sold
+9. **JLR sold about a quarter as many cars as BMW, Audi or Mercedes-Benz** · 2014: BMW 1,811,719 (secondary), Audi 1,741,129 (secondary), Mercedes-Benz 1,650,010, Porsche 189,849; JLR 462,209 (FY2015) [src]
 10. **JLR is Tata Motors' cash engine: over 80% of its automotive revenue** · and the only source of consolidated operating profit in FY2014 (case p.2)
 11. **JLR borrows in pounds and dollars to match where it earns** · Plain: natural hedge = borrowing in the currency you earn in, so currency moves hit both sides; ~17% of revenue each from the UK and North America (case p.2)
 12. **JLR's credit improved: Moody's upgraded it to Ba2 in 2013 and outlooks turned positive in 2014** · Plain: credit rating = an agency's grade of default risk; Ba/BB = "high yield" (below investment grade) (case p.2) [src]
@@ -44,7 +44,7 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 27. **Notes are 92% of borrowing; the £1,485m credit line is completely unused** · composition chart. Plain: revolving facility = a pre-agreed credit line
 28. **The two oldest notes cost most, 8.125% and 8.25%, and both become callable in 2016** · notes ranked by coupon, with call dates
 29. **Those two notes cost £34.5m a year more than JLR's 2015 rates** · at 1.50: US$410m = £273.3m × (8.125 − 3.5)% = £12.6m; £500m × (8.25 − 3.875)% = £21.9m. So what: a clear target for refinancing
-30. **JLR's dollar coupons fell from 8.125% in 2011 to 3.5% in 2015, with tenors that differ** · each US$ note's coupon and its spread over the matching Treasury on its issue date (chart); the 4.25% 2014 issue marked as the exception [src: issue dates, some approximate; Treasury data]
+30. **JLR's spread over Treasuries fell from 497bp in 2011 to 189bp in 2015, with one small rise in 2014** · spread at each US$ issue: 497 (May 2011) → 362 (Jan 2013) → 260 (Dec 2013) → 272 (Oct 2014) → 189 (Mar 2015) [src: Treasury CSVs; issue dates partly approximate]
 31. **Repayments are spread from 2018 to 2023, so there is no single wall of debt** · maturity ladder (£m per year)
 32. **Exhibit 1 converts dollars at about 1.56; the case tells us to use 1.50 for March 2015** · 410/263 = 1.559; £263m vs £273.3m. So what: we keep the bond maths in dollars and convert once
 33. **Exhibit 2: the market valued the 8.125% notes at 111.28, an 11% premium** · native table; plain notes on its jargon (two ISIN lines = the same bond sold to US and non-US investors; "i" = indicative price, no trade that day); price dated 4 Feb 2015, before the offer; second line stale (Aug 2014)
@@ -73,7 +73,7 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 54. **Two thirds of the 462bp fall came from a narrower credit spread** · waterfall: spread 304bp (66%); Treasury level and shorter length 158bp (34%). Plain: the 304bp also includes the value of the 2011 notes' call feature
 55. **At the same 5-year length, Treasuries fell only 26bp** · 1.83% → 1.57%
 56. **Test 1: the same bond's yield fell from 8.125% at issue to 2.28% to the call in 2015** · Exhibit 2
-57. **Test 2: JLR's spread over Treasuries fell from issue to issue** · spreads at issue for each US$ note [src]
+57. **Test 2: across five dollar issues, JLR's spread fell by 308bp** · 497 → 362 → 260 → 272 → 189bp (slide 30's data), tenor-matched
 58. **Test 3: market-wide high-yield spreads fell about 40bp; JLR's fell 304bp** · Plain: high-yield index spread = the average spread of all below-investment-grade bonds; ~502bp (May 2011) vs ~460bp (Mar 2015), different indices and dates, indicative only [src, secondary]. So what: about 260bp is JLR-specific
 59. **The reason: JLR became a far safer borrower** · dashboard from Exhibits 4–6 (EBITDA margin, net cash, debt/equity, cover) + ratings
 60. **The 2015 notes are also shorter, and the 2011 notes' call had to be paid for** · Plain: tenor effect = shorter loans usually cost less; 2011 notes sold as "callable after five years" [src]; the 2020 notes' early-repayment terms were not found, so no claim is made
@@ -143,13 +143,13 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 116. **What we found** · four findings, one per question
 117. **79.61% of the notes were tendered, almost all early, for US$375.7m including interest** · results [src]
 118. **The remaining US$83.6m was repaid in May 2016, the first call date** · [src: Tata Motors 20-F FY2016]
-119. **2015–2018: record sales, then China, diesel and Brexit trouble** · sales and profit [src]
-120. **2019–2021: big losses, Project Charge, COVID and the chip shortage** · [src]
-121. **Hindsight: the 3.5% notes fell due in March 2020, just as COVID hit** · how JLR refinanced and at what coupons [src]
-122. **2021: "Reimagine" bets on electric luxury cars** · [src]
-123. **S&P rated JLR investment grade in August 2024; Moody's sits one notch below** · S&P BBB- (Aug 2024); Moody's Ba1 (Jun 2025) [src]
+119. **Sales rose for three years to a record 614,309 in FY2018, then fell for three** · retail: 462,209 (FY15), 521,571, 604,009, 614,309, 578,915, 508,659, 439,588 (FY21) [src: JLR]
+120. **FY2019: a £3.6bn loss, including a £3.1bn write-down, and the Project Charge savings plan** · Project Charge £2.5bn target, later £5bn; COVID shut all plants for two months; the chip shortage [src: JLR]
+121. **Hindsight: 3.5% was cheap. When the notes fell due in March 2020, JLR was paying 5.875–7.75% on new debt** · repaid from cash in March 2020; €500m 5.875% 2024 and €500m 6.875% 2026 (Nov/Dec 2019), US$700m 7.75% 2025 (Oct 2020); ratings fell to S&P B+, Moody's B1 [src: JLR]. So what: the 2015 deal locked in cheap money, but brought repayment forward into a crisis
+122. **2021: "Reimagine" turns Jaguar into an all-electric brand from 2025** · £1.5bn of exceptional charges; FY2021 loss before tax £861m [src: JLR]
+123. **S&P rated JLR investment grade in August 2024; Moody's sits one notch below** · S&P BBB- (20 Aug 2024), Moody's Ba1 (13 Jun 2025) [src: JLR]; after the cyber-attack Moody's outlook turned negative (Sep 2025) and S&P's too (May 2026) [src, secondary]
 124. **2025: a cyber-attack stopped production for five weeks** · impact [src]
-125. **Today: FY2026 revenue £22.9bn; JLR now belongs to Tata Motors Passenger Vehicles** · latest results, ratings, ownership [src]
+125. **Today JLR is barely profitable: Q1 FY2027 revenue £6.0bn, profit before tax £109m** · adjusted EBIT margin 2.8%; FY2026 revenue £22.9bn; owned by Tata Motors Passenger Vehicles after the Oct 2025 demerger (secondary) [src]
 126. **The lesson: better credit cuts the cost of new debt, but buying back old debt at a fair price creates no value** · closing
 
 ## 8 · Team
@@ -172,6 +172,12 @@ The reader is a student part-way through CFA Level 1, reading on paper with no p
 | Chronological sequence | 4–17, 117–125 |
 | Epilogue: findings, turning points, outcome, after the case, today | 116–126 |
 | Final slide | 127 |
+
+## Sources round 3 applied (2026-10-30)
+- Slides 4, 7–9, 30, 57 and 119–125 now carry sourced figures. Secondary sources are labelled.
+- Unverified history (BMW and British Leyland dates) stays as background only.
+- Industry-wide premium SUV growth was not found; Land Rover's own growth is used instead.
+- **Not re-reviewed:** the user stopped the session for handover. The next session should run the strict review (round 3) on this plan.
 
 ## Response to the strict review (round 2: NOT READY, B+)
 - **B1 (lucidity):** a bond toolkit (18–24) before the exhibits; an NPV concept slide (84); MM and market efficiency (103); a "Plain:" definition and a "So what" on each slide the review listed.

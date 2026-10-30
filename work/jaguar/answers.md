@@ -44,13 +44,17 @@ All numbers come from `work/jaguar/calcs.py` (run it to see every step). Inputs:
   - premium above face **US$50.6m** (incl. US$12.3m early premium) ≈ 3 years of savings
 - The full dated incremental table is in the calcs output (old coupons avoided May/Nov to 2021; new coupons Mar/Sep to 2020).
 
-| Baseline | Pre-tax NPV @3.50% | After-tax NPV @2.80% |
+| Baseline (discount rate and why) | Pre-tax NPV | After-tax NPV |
 |---|---|---|
-| Old notes held to 2021 | +US$53.5m | +US$44.8m |
-| Old notes called May 2016 (realistic) | −US$13.4m | −US$10.4m |
-| Market value (111.28) | −US$4.4m | — |
+| Naive: old notes held to 2021 (3.50%, JLR's 5–6 year cost) | +US$53.6m | +US$43.0m (at 2.80%) |
+| **Realistic: called May 2016, at the market's 14-month yield 2.28%** | **−US$7.1m** | **−US$7.3m** (at 1.82%) |
+| Realistic, at the offer's own 0.895% | US$0.0m | — |
+| Against the market price (111.28, 4 Feb 2015) | −US$4.4m | — |
 
-- **Answer:** there is a real cash-interest saving but no economic saving. Against the realistic baseline (the call), JLR paid slightly more than the debt was worth. The "saving" only appears if you assume JLR would have kept 8.125% debt to 2021, which it would not.
+- Revised at gate 1 round 3 (strict review B2). The earlier "−US$13.4m" valued the 14-month call path at 3.5%, which was inconsistent with Q2's own reasoning.
+- New debt at par at 3.5% has PV ≈ the amount borrowed (472.0 vs 471.9), so NPV = PV of old debt avoided − cash paid.
+- After tax: the premium is deductible at 21% (FY2014 rate; deal date 17 Mar 2015); later flows at 20%.
+- **Answer:** there is a real cash-interest saving but no economic saving. Against the realistic baseline JLR paid slightly more than the debt was worth (or exactly fair value at the offer's own rate). The "saving" only appears if you assume JLR would have kept 8.125% debt to 2021, which it would not.
 
 ## Q4. Other benefits; who gains — *debatable*
 - **Benefits to JLR:**
@@ -61,7 +65,7 @@ All numbers come from `work/jaguar/calcs.py` (run it to see every step). Inputs:
   - signalling
 - **Costs:** the premium, the early-tender payment, fees, and refinancing risk from the maturity moving to 2020.
 - **Firm:** about zero value (MM; efficient market). A lower coupon means a slightly smaller interest tax shield.
-- **Bondholders who tendered:** +1.07 per 100 over the market price (US$4.4m on US$410m), +3.24 over being called (US$13.3m).
+- **Bondholders who tendered:** +1.08 per 100 over the market price (US$4.4m on US$410m), +1.74 over the value of being called, valued at 2.28% (US$7.1m).
 - **Tata Motors (sole shareholder):** about neutral to slightly negative.
 
 ## Independent check (sonnet helper, case only, no teaching note) — `work/jaguar/check/`
@@ -72,7 +76,7 @@ All numbers come from `work/jaguar/calcs.py` (run it to see every step). Inputs:
 | Q2 headline | 111–112 (to call; market and tender anchors) | 110.44 (to call at 2.24%, settle 31 Mar) | the checker used JLR's 5-year spread over the 1-year Treasury and a later settlement date; it is inside our band |
 | Q2 to maturity | 125.43 | 124.11 (at 3.69%) | the checker used a 6-year yield (3.69%) instead of 3.5% |
 | Q3 NPV vs hold | +53.5 | +53.8 | the checker included a 1.25% fee and different funding; same conclusion |
-| Q3 NPV vs call | −13.4 | −13.1 | same |
+| Q3 NPV vs call | −7.1 at 2.28% (−13.4 at 3.5%) | −13.1 at 3.5% | the checker used 3.5% for the call path; at the same 3.5% we agree (−13.4 vs −13.1) |
 | Conclusion | no economic saving | "little or no value created once compared with the call" | same |
 
 ## Teaching note comparison (for checking only; never cited on slides)

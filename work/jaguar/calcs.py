@@ -333,7 +333,21 @@ def q3_consistent():
     print(f"  Exhibit 1 coupon cost in GBP at 1.50: US$410m = £{410/FX:.1f}m; excess coupon (8.125-3.5)% = £{410/FX*0.04625:.1f}m/yr; plus £500m x (8.25-3.875)% = £{500*0.04375:.1f}m; total £{410/FX*0.04625+500*0.04375:.1f}m")
 
 
+def spreads_by_issue():
+    """Q1 test 2: coupon minus tenor-matched Treasury at each US$ issue (Treasury par yields, sources_research R3-7)."""
+    print("=" * 78, "\nQ1 TEST 2: SPREAD AT EACH US$ ISSUE (coupon - matching Treasury)")
+    issues = [("May 2011 (16 May)", "8.125% 2021, 10y", 8.125, 3.15),
+              ("Jan 2013 (28 Jan)", "5.625% 2023, 10y", 5.625, 2.00),
+              ("Dec 2013 (17 Dec)", "4.125% 2018, 5y", 4.125, 1.52),
+              ("Oct 2014 (28 Oct)", "4.250% 2019, 5y", 4.250, 1.53),
+              ("Mar 2015 (3 Mar)", "3.500% 2020, 5y", 3.500, 1.61)]
+    for d, n, c, ust in issues:
+        print(f"  {d:18s} {n:18s} {c:.3f}% - {ust:.2f}% = {100*(c-ust):.0f}bp")
+    print("  (2018 notes are ~4.5y; 5y Treasury used as nearest. Issue dates approximate where noted in sources.)")
+
+
 if __name__ == "__main__":
     main()
     extras()
     q3_consistent()
+    spreads_by_issue()

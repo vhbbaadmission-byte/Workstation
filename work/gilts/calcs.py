@@ -270,6 +270,37 @@ def strict_extras(res):
     print(f"  Real bond, 4% 2060: yield {y0:.2f}% -> {y1:.2f}% (+{100*(y1-y0):.0f}bp); duration-only estimate -{md} x {(y1-y0)/100:.4f} = {-md*(y1-y0):.1f}%;"
           f" actual {p_then} -> {p_now} = {100*(p_now/p_then-1):.1f}%  [latest price/yield secondary source, verify]")
 
+    # closed-form Macaulay duration (CFA): D = (1+y)/y - [(1+y) + N(c-y)] / [c((1+y)^N - 1) + y]
+    print("  Closed-form Macaulay duration: (1+y)/y - [(1+y) + N(c-y)] / [c((1+y)^N - 1) + y]")
+    for n in (7, 10, 20, 30, 50):
+        cc, y = res[n]["c"] / 100, res[n]["y"]
+        a = (1 + y) / y
+        b = ((1 + y) + n * (cc - y)) / (cc * ((1 + y) ** n - 1) + y)
+        print(f"    {n:>2}y  c={cc:.4f} y={y:.6f}: {a:.4f} - {(1+y)+n*(cc-y):.4f}/{cc*((1+y)**n-1)+y:.4f} = {a:.4f} - {b:.4f} = {a-b:.2f}")
+    # short t x PV tables for 2y and 3y; convexity table 10y
+    for n in (2, 3):
+        c, y, p0 = res[n]["c"], res[n]["y"], res[n]["p"]
+        print(f"  {n}y duration table: " + "; ".join(f"t{t:.0f}: PV {cf/(1+y)**t:.4f}, t x PV {t*cf/(1+y)**t:.4f}" for t, cf in cash_flows(c, n)))
+    c, y, p0 = res[10]["c"], res[10]["y"], res[10]["p"]
+    print("  10y convexity table: t, CF, PV, t(t+1) x PV")
+    for t, cf in cash_flows(c, 10):
+        pv = cf / (1 + y) ** t
+        print(f"    t={t:>2.0f}  {cf:7.2f}  {pv:7.4f}  {t*(t+1)*pv:9.2f}")
+    # price-based convexity, 5bp step, 50y
+    c, y, p0 = 4, res[50]["y"], res[50]["p"]
+    pm, pp = price(c, y - 0.0005, 50), price(c, y + 0.0005, 50)
+    print(f"  50y convexity, CFA price-based with 5bp step: ({pm:.4f} + {pp:.4f} - 2 x {p0:.2f}) / ({p0:.2f} x 0.0005^2) = {(pm+pp-2*p0)/(p0*0.0005**2):.2f}")
+    print(f"  50y ApproxModDur with 1% step: ({price(c,y-0.01,50):.4f} - {price(c,y+0.01,50):.4f})/(2 x {p0:.2f} x 0.01) = {(price(c,y-0.01,50)-price(c,y+0.01,50))/(2*p0*0.01):.2f}")
+    # annuity form with 4 dp
+    for n in (5, 10):
+        c, y = res[n]["c"], res[n]["y"]
+        ann = (1 - (1 + y) ** -n) / y
+        print(f"  {n}y annuity form 4dp: {c} x {ann:.4f} = {c*ann:.4f}; 100/{(1+y)**n:.4f} = {100/(1+y)**n:.4f}; sum {c*ann+100/(1+y)**n:.4f}")
+    # real bond, like-for-like yields (both semi-annual)
+    y0, ysa, md = 3.364984, 5.658, 22.24
+    print(f"  4% 2060 like-for-like (semi-annual both): {y0:.3f}% -> {ysa:.3f}% = +{100*(ysa-y0):.0f}bp; duration-only -{md} x {(ysa-y0)/100:.5f} = {-md*(ysa-y0):.1f}%; actual -34.4%;"
+          f" check annual-compounded equivalent (1+{ysa/100}/2)^2-1 = {100*((1+ysa/200)**2-1):.3f}%")
+
 
 if __name__ == "__main__":
     main()
